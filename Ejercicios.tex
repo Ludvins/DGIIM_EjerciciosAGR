@@ -1,0 +1,99 @@
+\documentclass[UTF8]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{inputenc}
+\usepackage{geometry}
+\setlength{\parindent}{0pt}
+\begin{document}
+
+\title{Álgebras, Grupos y Representaciones \\
+      \large Ejercicios
+  }
+
+\author{Luis Antonio Ortega Andrés}
+
+\maketitle
+
+\textbf{Ejercicio 1.} \emph{Sea \(A\) un anillo. Diremos que \(A\) es trivial si
+  \(A = \{0\}\). Demostrar que \(A\) es trivial si, y sólo si, \(1 = 0\).}\\
+
+Supongamos que \(A\) es trivial, entonces como \(A\) es un anillo, \(\exists 1
+\in A \implies 0 = 1\). Sea ahora \(1 = 0\), sea \(a \in A\) se tiene que \(a =
+a*1 = a*0 = 0 \implies A = \{0\}\).\\
+
+\textbf{Ejercicio 2.} \emph{Sea \(K\) un cuerpo y \(M_n(K)\) el anillo de
+  matrices cuadradas de orden \(n\) con entradas en \(K\). Demostrar que
+  \(Z(M_n(K)) = \{kI_n \ | \  k \in K\}\), donde \(I_n\) es la matriz identidad
+  de orden \(n\)}.\\
+
+Es evidente que  \(\{kI_n \ | \  k \in K\} \subset Z(M_n(K))\). Tomemos \(A \in
+Z(M_n(K))\), \(E_{ij} \in M_n(K)\) la matriz de ceros salvo un \(1\) en la
+position \((i,j)\). Se tiene que
+\[
+E_{ij}A = AE_{ij} \ \forall i,j \in \{0,\dots,n-1\}
+\]
+Pero es sencillo comprobar que \(E_{ij}A\) es una matriz de ceros salvo por
+tener la fila \(j\)-ésima de \(A\) en la fila \(i\)-ésima. De igual forma \(AE_{ij}\) es una matriz de ceros salvo por
+tener la columna \(i\)-ésima de \(A\) en la columna \(j\)-ésima.
+
+Luego estamos igualando una matriz con una sola fila no nula y una con una sola
+columna no nula, por ello \(A\) debe ser diagonal. Además, el valor \(i\)-ésimo
+y el valor \(j\)-ésimo de la diagonal deben coincidir. Con esto \(A \in \{kI_n
+\ | \  k \in K\}\).\\
+
+\textbf{Ejercicio 3.} \emph{Sea \(V\) un espacio vectorial sobre un cuerpo \(K\)
+  y el
+  conjunto}
+\[
+End_K(V) = \{f:V \to V \ | \ f \text{ \emph{es} } K\text{\emph{-lineal}}\}
+\]
+\emph{comprobar que es un subanillo de \(End(V)\). Consideremos la aplicación \(h:K \to End_K(V)\)
+que asigna a cada \(k \in K\) la homotecia \(h(k):V \to V\), definido por
+\(h(k)(v) = kv \ \forall v \in V\). Comprobar que \(h\) está bien definida y que es
+un morfismo de anillos. Además si \(T:V \to V\) es \(K\)-lineal y \(k \in K\),
+comprobar que \(T \circ h(k) = h(k) \circ T\), luego \(Im(h) \subset
+Z(End_K(V))\). Con esto \(End_K(V)\) es una \(K\)-álgebra.}\\
+
+Es claro que con las operaciones de \(End(V)\), se converva la \(K\)-linealidad,
+luego \(End_K(V)\) es un subanillo.
+
+La aplicación \(h\) está bien definida por ser \(V\) un espacio vectorial sobre
+\(K\). Veamos que es un morfismo de anillos.
+\begin{itemize}
+\item Sean \(a,b \in K\) y \(v \in V\), \(h(a + b)(v) = (a+b)v = av + bv =
+  h(a)(v) + h(b)(v) = (h(a) + h(b))(v) \)
+\item Sean \(a,b \in K\) y \(v \in V\), \(h(ab)(v) = (ab)v = a(bv) =
+  ak(b)(v) = k(a)\circ k(b) (v) \)
+\item Sea \(v \in V\), \(k(1)(v) = 1v = v = Id(v)\)
+\end{itemize}
+
+Hagamos la última comprobación que se nos pide \(T \circ h(k) (v) = T(kv) =
+kT(v) = h(k) \circ T (v)\). \\
+
+\textbf{Ejercicio 4.} \emph{Supongamos que \(A\) y \(B\) son \(K\)-álgebras son
+morfismos de estructura \(\rho_A\) y \(\rho_B\). Sea \( \phi:A \to B\) un morfismo
+de anillos. Demostrar que \(\phi\) es un morfismo de \(K\)-álgebras si, y sólo si,
+\(\phi \circ \rho_A = \rho_B\).} \\
+
+Sea \(\phi \circ \rho_A = \rho_B\) la propiedad de \(\phi\) que debemos
+comprobar para ser un morfismo de \(K\)-álgebras es que dados \(a
+\in A \)  y \(k \in K \) se cumple que \(\phi(ka) = k\phi(a)\).\\
+
+\textbf{Ejercicio 5.} \emph{Sea \(A\) un espacio vectorial sobre un cuerpo
+  \(K\). Demostrar que dar una estructura de \(K\)-álgebra asociativa unital
+  sobre \(A\) es equivalente a dar una multiplicación asociativa \(K\)-bilineal \(\star :A
+  \times A \to A\) junto con una aplicación \(K\)-lineal \(\tau : K \to A\) tal
+  que \(\tau(k)\star a = ka = a \star \tau(k) \ \forall k \in K, a \in A\)}\\
+
+Supongamos que tenemos una estructura de \(K\)-álgebra sobre \(A\). Esto es un
+morfismo de anillos \(\rho :K \to Z(A)\)
+
+
+Supongamos ahora que tenemos ambas aplicaciones definidas. Notamos
+que \(\tau (k) = k \tau(1_K)\), además \(\tau(1_K)\star a = 1_Ka = a = a\star
+\tau(1_K)\), luego \(\tau(1_K) = 1_A\). Es facil comprobar que con esto \(\tau\)
+es un morfismo de anillos con imagen en \(Z(A)\) por hipótesis
+
+\end{document}
