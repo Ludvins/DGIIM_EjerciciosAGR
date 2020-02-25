@@ -1,5 +1,17 @@
-\section{Ejercicio 4. TODO.} \emph{Supongamos que \(A\) y \(B\) son
+\section{Ejercicio 4.} \emph{Supongamos que \(A\) y \(B\) son
   \(K\)-álgebras con
 morfismos de estructura \(\rho_A\) y \(\rho_B\). Sea \( \phi:A \to B\) un morfismo
 de anillos. Demostrar que \(\phi\) es un morfismo de \(K\)-álgebras si, y sólo si,
 \(\phi \circ \rho_A = \rho_B\).} \\
+
+Supongamos que \(\phi \circ \rho_A = \rho_B\), sean \(k \in K\) y \(a \in A\)
+\[
+\phi(ka) = \phi(\rho_A(k)\star a) = \phi \circ \rho_A (k) \star \phi(a) = \rho_B(k)\star \phi(a)  = k \phi(a)
+\]
+Que es la única propiedad que necesita \(\phi \) para ser un morfismo de \(K\)-espacios vectoriales.
+
+Supongamos ahora que \(\phi \) un morfismo de \(K\)-álgebras, veamos que \(\phi \circ \rho_A = \rho_B\).
+Sea \(k \in K, b \in B\)
+\[
+\phi \circ \rho_A (k) = \phi(k \star 1_A) = \phi(k) \star \phi(1_A) = k \star 1_B = k1_B = \rho_B(k)
+\]
