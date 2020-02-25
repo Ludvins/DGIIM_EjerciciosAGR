@@ -1,0 +1,35 @@
+\section{Ejercicio 7. *} \emph{Sea \(K\) un cuerpo. Dar la lista, salvo isomorfismos, de
+todas las \(K\)-álgebras asociativas unitales de dimensión 2.}\\
+
+Sea \(A\) una \(K\)-álgebra con morfismo de estructura \(\rho\). Sea \(\{1,
+a\}\) la base de \(A\) como espacio vectorial.
+
+
+Consideramos
+
+\[
+  \begin{aligned}
+    f:K[X] &\to A \\
+    \alpha + \beta x &\mapsto \rho(\alpha) + \rho(\beta)a
+  \end{aligned}
+\]
+
+Es un morfismo de álgebras por ser \(\rho = f \circ \rho_K\) con \(\rho_K\) el
+morfismo de estructura de \(K[X]\).
+
+Notamos que la imagen de \(f\) tiene dimensión 2 como espacio vectorial, luego
+es sobreyectivo (?).
+
+Esto nos dice que existe \(I\) ideal de \(K[X]\) tal que \(K[X]/I \cong A\). Por
+ello, buscar álgebras de dimensión 2 es equivalente a buscar ideales del anillo
+de polinomios \(K[X]\).
+
+Tenemos entonces 3 opciones
+\begin{itemize}
+\item \(K[X]/\langle x^2-1 \rangle\)
+\item \(K[X]/\langle x^2+1\rangle\)
+\item \(K[X]/\langle x^2\rangle\)
+\end{itemize}
+
+\textbf{TODO Comprobar que es verdad}
+\textbf{TODO Comprobar cuales son asociativos unitales}

@@ -1,0 +1,19 @@
+\section{Ejercicio 2.} \emph{Sea \(K\) un cuerpo y \(M_n(K)\) el anillo de
+  matrices cuadradas de orden \(n\) con entradas en \(K\). Demostrar que
+  \(Z(M_n(K)) = \{kI_n \ | \  k \in K\}\), donde \(I_n\) es la matriz identidad
+  de orden \(n\)}.\\
+
+Es evidente que  \(\{kI_n \ | \  k \in K\} \subset Z(M_n(K))\). Tomemos \(A \in
+Z(M_n(K))\), \(E_{ij} \in M_n(K)\) la matriz de ceros salvo un \(1\) en la
+position \((i,j)\). Se tiene que
+\[
+E_{ij}A = AE_{ij} \ \forall i,j \in \{0,\dots,n-1\}
+\]
+Pero es sencillo comprobar que \(E_{ij}A\) es una matriz de ceros salvo por
+tener la fila \(j\)-ésima de \(A\) en la fila \(i\)-ésima. De igual forma \(AE_{ij}\) es una matriz de ceros salvo por
+tener la columna \(i\)-ésima de \(A\) en la columna \(j\)-ésima.
+
+Luego estamos igualando una matriz con una sola fila no nula y una con una sola
+columna no nula, por ello \(A\) debe ser diagonal. Además, el valor \(i\)-ésimo
+y el valor \(j\)-ésimo de la diagonal deben coincidir. Con esto \(A \in \{kI_n
+\ | \  k \in K\}\).

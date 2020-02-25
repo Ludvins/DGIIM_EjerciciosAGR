@@ -1,0 +1,29 @@
+
+\section{Ejercicio 3.} \emph{Sea \(V\) un espacio vectorial sobre un cuerpo \(K\)
+  y el
+  conjunto}
+\[
+End_K(V) = \{f:V \to V \ | \ f \text{ \emph{es} } K\text{\emph{-lineal}}\}
+\]
+\emph{comprobar que es un subanillo de \(End(V)\). Consideremos la aplicación \(h:K \to End_K(V)\)
+que asigna a cada \(k \in K\) la homotecia \(h(k):V \to V\), definido por
+\(h(k)(v) = kv \ \forall v \in V\). Comprobar que \(h\) está bien definida y que es
+un morfismo de anillos. Además si \(T:V \to V\) es \(K\)-lineal y \(k \in K\),
+comprobar que \(T \circ h(k) = h(k) \circ T\), luego \(Im(h) \subset
+Z(End_K(V))\). Con esto \(End_K(V)\) es una \(K\)-álgebra.}\\
+
+Es claro que con las operaciones de \(End(V)\), se converva la \(K\)-linealidad,
+luego \(End_K(V)\) es un subanillo.
+
+La aplicación \(h\) está bien definida por ser \(V\) un espacio vectorial sobre
+\(K\). Veamos que es un morfismo de anillos.
+\begin{itemize}
+\item Sean \(a,b \in K\) y \(v \in V\), \(h(a + b)(v) = (a+b)v = av + bv =
+  h(a)(v) + h(b)(v) = (h(a) + h(b))(v) \)
+\item Sean \(a,b \in K\) y \(v \in V\), \(h(ab)(v) = (ab)v = a(bv) =
+  ak(b)(v) = k(a)\circ k(b) (v) \)
+\item Sea \(v \in V\), \(k(1)(v) = 1v = v = Id(v)\)
+\end{itemize}
+
+Hagamos la última comprobación que se nos pide \(T \circ h(k) (v) = T(kv) =
+kT(v) = h(k) \circ T (v)\).

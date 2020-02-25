@@ -1,0 +1,58 @@
+\section{Ejercicio 6. *} \emph{Sea \(K\) un cuerpo. Comprobar que el anillo de polinomios
+es una \(K[X]\)-álgebra. Si ahora tomamos un ideal no nulo \(I\) de
+\(K[X]\), comprobar que \(A = K[X]/I\) tiene estructura de
+\(K\)-álgebra. Sabemos que existe un único polinómio \(p(X) \in K[X]\) tal que
+\(I = \langle p(X) \rangle\). Llamamos \(n\) al grado de \(p(X)\), y suponemos
+\(n > 0\). Comprobar que \(\mathcal{B} = \{1 + I, x + I, \dots, x^{n-1} + I\}\)
+es una base de \(A\) como \(K\)-espacio vectorial y, por tanto \(dim_KA = n\).
+Sea}
+\[
+p(X) = p_0 + p_1X + p_2X^2\dots + X^n
+\]
+\emph{Comprobar que la matriz de \(M_n(K)\) que representa al endomorfismo \(\lambda(x
++ I)\) con respecto a la base \(\mathcal{B}\) es}
+\[
+\tilde{N}(p) = \begin{bmatrix}
+    0       &  \dots  & 0 & -p_0 \\
+    1       &  \dots  & 0 & -p_1 \\
+    \vdots &  & \vdots & \vdots \\
+    0       &  \dots  & 1 & -p_{n-1}
+\end{bmatrix}
+\]
+\emph{y que \(A\) es isomorfa a la subálgebra \(\{a_0I + a_1\tilde{N}(p) + \dots +
+  a_{n-1}\tilde{N}(p)^{n-1} : a_0, a_1, \dots, a_{n-1} \in K\} \subset M_n(K)\)}\\
+
+El anillo de polinomios \(K[X]\) es una \(K\)-álgebra utilizando el morfismo de
+anillos
+\[
+\begin{aligned}
+  \rho: K &\to K[X]\\
+        k &\mapsto k
+\end{aligned}
+\]
+El morfismo de anillos que da a \(A = K[X]/I\) estructura de \(K\)-álgebra es el
+siguiente:
+\[
+\begin{aligned}
+  \rho: K &\to K[X]/I \\
+  k &\mapsto k + I
+\end{aligned}
+\]
+La comprobación de que se tratan de morfismos de anillos es rutinaria.
+El algoritmo de división nos asegura que todos los polinomios de \(A\) tienen
+grado a lo sumo \(n-1\), por tanto \(\mathcal{B}\) es un sistema de generadores
+de \(A\) y forman una base por ser linealmente independientes.
+
+Sea el endomorfismo \(\lamda(x+I)(a) = (x+I)a\), es claro que las primeras
+\(n-1\) columnas de la matriz \(\tilde{N}(p)\) corresponden a multiplicar \(x +
+I\) por los elementos \(1 + I, \dots, x^{n-2} + I\). Ahora,
+\[
+(x + I)(x^{n-1} + I) = x^n + I = -p(X) + I
+\]
+De ahí la última columna de la matriz.
+
+Dado \(a \in A\) con \(a = (a_0, \dots, a_{n-1})\) en \(\mathcal{B}\) el
+morfismo de K-álgebras lleva \((a_0,\dots,a_{n-1}) \to a_0I + a_1\tilde{N}(p) + \dots +
+  a_{n-1}\tilde{N}(p)^{n-1} \)
+
+\textbf{TODO terminar}
