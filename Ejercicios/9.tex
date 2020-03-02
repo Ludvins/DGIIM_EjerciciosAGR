@@ -1,0 +1,127 @@
+\section{Ejercicio 8.} \emph{Sea}
+\[
+  \mathbb{H} = \Big\{ \begin{bmatrix}
+    \alpha       &  -\bar{\beta} \\
+    \beta       &  \bar{\alpha}
+\end{bmatrix} \ : \ \alpha , \beta \in \mathbb{C} \Big\}
+\]
+\emph{1. Demostrar que \(\mathbb{H}\) es una subálgebra real de
+  \(M_2(\mathbb{C})\) y que \(Z(\mathbb{H}) = \mathbb{R}\)}\\
+\emph{2. Demostrar que todo elemento no nulo de \(\mathbb{H}\) es una unidad}\\
+\emph{3. Demostrar que las matrices}
+
+\[
+  \text{\textbf{1}}  = \begin{bmatrix}
+    1  &  0 \\
+    0  &  1
+\end{bmatrix},   \text{\textbf{i}} = \begin{bmatrix}
+    0  &  -1 \\
+    1  &  0
+\end{bmatrix},  \text{\textbf{j}}  = \begin{bmatrix}
+    i  &  0 \\
+    0  &  -i
+\end{bmatrix},   \text{\textbf{k}}  = \begin{bmatrix}
+    0  &  i \\
+    i  &  0
+\end{bmatrix}
+\]
+\emph{forman una base de \(\mathbb{H}\) como espacio vectorial real.}\\
+\emph{4. Comprobar las identidades}
+\[
+  \text{\textbf{i}} ^2 = \text{\textbf{j}} ^2 = \text{\textbf{k}} ^2 = -\text{\textbf{1}} , \
+  \text{\textbf{i}} \text{\textbf{j}}  = \text{\textbf{k}} , \ \text{\textbf{j}} \text{\textbf{k}}  = \text{\textbf{i}} , \ \text{\textbf{k}} \text{\textbf{i}}  = \text{\textbf{j}}
+\]
+
+Para ver que es una subálgebra, vemos que \(\mathbb{H}\) es un subespacio
+vectorial de \(M_2(\mathbb{C})\), vemos que es cerrado para la suma de matrices
+
+\[
+  \begin{bmatrix}
+    \alpha_1       &  -\bar{\beta_1} \\
+    \beta_1       &  \bar{\alpha_1}
+\end{bmatrix} \begin{bmatrix}
+    \alpha_2       &  -\bar{\beta_2} \\
+    \beta_2       &  \bar{\alpha_2}
+\end{bmatrix} = \begin{bmatrix}
+    \alpha_1 + \alpha_2 & -\bar{\beta_1} + \bar{\beta_2} \\
+    \beta_1 + \beta_2 & \bar{\alpha_1} +\bar{\alpha_2}
+\end{bmatrix}
+\]
+
+y para la multiplicación
+
+\[
+  \begin{bmatrix}
+    \alpha_1       &  -\bar{\beta_1} \\
+    \beta_1       &  \bar{\alpha_1}
+\end{bmatrix} \begin{bmatrix}
+    \alpha_2       &  -\bar{\beta_2} \\
+    \beta_2       &  \bar{\alpha_2}
+\end{bmatrix} = \begin{bmatrix}
+    \alpha_1\alpha_2 - \bar{\beta_1}\beta_2 & - \alpha_1 \bar{\beta_2} - \bar{\beta_1}\bar{\alpha_2} \\
+    \beta_1\alpha_2 + \bar{\alpha_1}\beta_2       &  -\beta_1\bar{\beta_2} + \bar{\alpha_1}\bar{\alpha_2}
+\end{bmatrix}
+\]
+además \(1 \in \mathbb{H}\)
+
+Para que un elemento esté en el centro deben coincidir
+
+\[
+  \begin{bmatrix}
+    \alpha_1       &  -\bar{\beta_1} \\
+    \beta_1       &  \bar{\alpha_1}
+\end{bmatrix} \begin{bmatrix}
+    \alpha_2       &  -\bar{\beta_2} \\
+    \beta_2       &  \bar{\alpha_2}
+\end{bmatrix} = \begin{bmatrix}
+    \alpha_1\alpha_2 - \bar{\beta_1}\beta_2 & - \alpha_1 \bar{\beta_2} - \bar{\beta_1}\bar{\alpha_2} \\
+    \beta_1\alpha_2 + \bar{\alpha_1}\beta_2       &  -\beta_1\bar{\beta_2} +
+    \bar{\alpha_1}\bar{\alpha_2}
+\end{bmatrix}
+\]
+\[
+   \begin{bmatrix}
+    \alpha_2       &  -\bar{\beta_2} \\
+    \beta_2       &  \bar{\alpha_2}
+\end{bmatrix} \begin{bmatrix}
+    \alpha_1       &  -\bar{\beta_1} \\
+    \beta_1       &  \bar{\alpha_1}
+\end{bmatrix}= \begin{bmatrix}
+    \alpha_2\alpha_1 - \bar{\beta_2}\beta_1 & - \alpha_2 \bar{\beta_1} - \bar{\beta_2}\bar{\alpha_1} \\
+    \beta_2\alpha_1 + \bar{\alpha_2}\beta_1       &  -\beta_2\bar{\beta_1} + \bar{\alpha_2}\bar{\alpha_1}
+\end{bmatrix}
+\]
+Para tener esto necesitamos \(\beta_1 \alpha_2 + \bar{\alpha_1}\beta_2 =
+\beta_2\alpha_1 + \bar{\alpha_2}\beta_1  \ \implies \ \beta_1 = 0\) y \(\alpha_1
+= \bar{\alpha_1}\). Luego \(\alpha \in \mathbb{R}\)
+\[
+  Z(\mathbb{H}) =  \Big\{\begin{bmatrix}
+    a       &  0 \\
+   0 &  a
+ \end{bmatrix}  : \ a \in \mathbb{R} \Big\} \cong \mathbb{R}
+\]
+
+
+2. Para ver que todo elemento es una unidad basta tomar
+\[
+   \begin{bmatrix}
+    \alpha       &  -\bar{\beta} \\
+    \beta       &  \bar{\alpha}
+  \end{bmatrix} ^{-1} =
+   \begin{bmatrix}
+    \bar{\alpha}/\|\alpha\|       &  \bar{\beta}/\|\beta\| \\
+    -\beta/\|\beta\|       &  \alpha / \|\alpha\|
+\end{bmatrix}
+\]
+
+3. Veamos ahora que dichas matrices son una base, es sencillo ver que son
+linealmente independientes, luego comprobemos que son un sistema de generadores
+
+\[
+   \begin{bmatrix}
+    \alpha       &  -\bar{\beta} \\
+    \beta       &  \bar{\alpha}
+  \end{bmatrix}  = Re(\alpha)\text{\textbf{1}} + Re(\beta)\text{\textbf{i}} + Im(\alpha)\text{\textbf{j}} + Im(\beta)\text{\textbf{k}}
+\]
+
+4. Para comprobar dichas identidades basta con realizar las cuentas correspondientes.
