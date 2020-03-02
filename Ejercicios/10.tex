@@ -3,4 +3,21 @@
   Ann_A(V) = \{a \in A : av = 0 \ \forall v \in V\}
 \]
 \emph{es un ideal de \(A\). Dotar a \(V\) de estructura de \(A/Ann_A(V)\)-módulo
-  diel (es decir, la representación correspondiente es fiel)}.\\
+  fiel (es decir, la representación correspondiente es fiel)}.\\
+
+Sean \(a,b \in Ann_A(V)\), tenemos que \((a+b)(v) = av + bv = 0 \implies a+b \in
+Ann_A(V)\).
+Sea ahora \(a \in Ann_A(V), b \in A\), \((ab)v = a(bv) = 0 \implies ab \in
+Ann_A(V)\) luego tenemos un ideal.
+
+Una representación es fiel si y solo si su núcleo es trivial. Sea \(\rho\) el
+morfismo de estructura de \(V\), tenemos que \(Ker(\rho) = Ann_A(V)\) que hemos
+visto es un ideal, luego para dotar a \(V\) de estructura de  \(A/Ann_A(V)\)-módulo
+fiel definimos el morfismo de estructura
+
+\[
+  \begin{aligned}
+    \tau:A/Ann_A(V) &\to End(V) \\
+    a + Ann_A(V) &\mapsto \rho(a)
+  \end{aligned}
+\]
