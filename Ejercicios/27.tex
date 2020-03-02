@@ -1,0 +1,36 @@
+\section{Ejercicio 27. **}  \textit{Sea $R$ un álgebra sobre un cuerpo de característica distinta de 2, y $a,b,e \in R$ idempotentes. Demostrar que si $e = a + b$, entonces  $ab = ba = 0$. Si la característica es 2, encontrar un contraejemplo con  $b \neq a$.}\\
+
+Por $e, a, b$ idempotentes, tenemos que
+\[
+    a + b = e = e^2 = a^2 + b^2 + ab + ba = a + b + ab + ba \implies ab + ba = 0
+.\]
+\begin{equation}\label{a}
+    ab = -ba
+\end{equation}
+Ahora, si multiplicamos a izquierda y derecha por $a$, por ser $a$ idempotente tenemos que $aba = -aba$. Ahora, como $char(R) \neq 2$, $aba = 0$. Ahora, sustituyendo $ab$ ó $ba$ respectivamente usando (\ref{a}), tenemos
+\[
+    0 = aba = -baa = -ba \implies ba = 0
+.\]
+\[
+    0 = aba = -aab = -ab \implies ab = 0
+.\]
+
+Veamos ahora el contraejemplo. Sea $\mathbb{F}_2$ el cuerpo de dos elementos (el más sencillo con característica 2), y $M_2(\mathbb{F}_2)$ la $\mathbb{F}_2-$álgebra usual de matrices de orden 2 sobre este cuerpo. Entonces, tomamos
+\[
+a =
+\begin{pmatrix}
+    1 & 0 \\
+    1 & 0
+\end{pmatrix}, \
+b =
+\begin{pmatrix}
+    1 & 0 \\
+    0 & 1 \\
+\end{pmatrix}, \
+e = a + b =
+\begin{pmatrix}
+    0 & 0 \\
+    1 & 1
+\end{pmatrix}
+.\]
+En efecto, es sencillo comprobar que $a, b,$ y $e$ son idempotentes, y que por $b = I_2$, efectivamente $ab = ba = a \neq 0$
