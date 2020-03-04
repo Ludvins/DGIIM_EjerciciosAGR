@@ -1,0 +1,15 @@
+\section{Ejercicio 12.}%
+\label{sec:ejercicio_12_}
+
+\textit{Demostrar que un conjunto de generadores $m_i: i \in I$ de un módulo  ${}_AM$ es una base si, y solo si, la igualdad $\sum_i r_im_i = 0$ para $r_i \in A$ implica $r_i = 0$ para todo $\forall i \in I$. Dar un ejemplo de módulo no nulo finitamente generado que no sea libre.}\\
+
+Razonemos por contradicción para la primera implicación. Supongamos que $m_1, \dots, m_n$ es base de ${}_AM$ y que existen $r_1, \dots, r_n$, con $r_k \neq 0$ tal que $\sum_ir_im_i = 0$. Sea $m \in M$ con $m = \sum_ia_im_i$. Entonces
+\[
+m = \sum_ia_im_i = \sum_ia_im_i + \sum_ir_im_i = \sum_i(a_i+r_i)m_i
+\]
+con $a_k + r_k \neq a_k$. Por tanto $m_1, \dots, m_n$ no sería base.
+
+Para la otra implicación, supongamos que existen $ a_1, \dots, a_n, a'_1, \dots a'_n \in A$ tales que $\sum_i a_im_i= \sum_i a'_im_i$. Entonces,
+\[
+\sum_i a_im_i - \sum_i a'_im_i = 0 \implies \sum_i (a_i - a'_i)m_i = 0 \implies a_i = a'_i\ \forall i \in I
+.\]
