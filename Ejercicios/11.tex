@@ -1,0 +1,22 @@
+\section{Ejercicio 11.}  \textit{Sea $M$ un $A$-módulo}\\
+\begin{enumerate}
+    \item \textit{Dados submódulos $N_1, \dots, N_m$ de M, tenemos que}
+    \[
+    N_1 + \dots + N_m = \{n_1 + \dots + n_m: n_i \in Ni\}
+    .\]
+    \item \textit{Dado $X = \{m_1, \dots, m_n\} \subset M$, tenemos que $RX = Rm_1 + \dots + Rm_n$.}
+\end{enumerate}
+
+\textbf{1.} Por $ N_1, \dots, N_m$ submódulos es claro que $N_1 \cup \dots \cup N_m \subset \{n_1 + \dots + n_m: n_i \in Ni\}$ y que $\{n_1 + \dots + n_m: n_i \in Ni\}$ es también un submódulos de $M$.
+
+Supongamos ahora que existe $N$ submódulo de M con $ \cup_i N_i \subset N $ submódulo de $M$. Para cualesquiera $n_1, \dots, n_m$ en $ N_1, \dots, N_m$ respectivamente, por contener $N$ a la unión de todos los $N_i$,
+\[
+n_i \in N \forall i = 1, \dots, m
+.\]
+
+Y por $N$ submódulo,
+\[
+\sum_i n_i \in N \implies \{n_1 + \dots + n_m: n_i \in Ni\} \subset N
+.\]
+
+\textbf{2.} La inclusión de izquierda a derecha es inmediata pues $Rm_1 + \dots + Rm_n$ es un submódulo que contiene $X$. Para la otra inclusión, claramente $Rm_1, \dots, Rm_n \subset Rx$. Ahora, usando el apartado anterior, y que $Rx$ es un submódulo de $M$, tenemos $Rm_1 + \dots + Rm_n \subset Rx$
