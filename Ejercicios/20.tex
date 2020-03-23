@@ -1,0 +1,40 @@
+\section{Ejercicio 20. *} \textit{Consideramos \(T:\mathbb{R}^3 \to
+  \mathbb{R}^3\) una aplicación lineal, y la estructura de
+  \(\mathbb{R}[X]\)-módulo correspondiente sobre \(\mathbb{R}^3\). Discutir los
+  posibles valores de la longitud de \(\mathbb{R}^3\) como
+  \(\mathbb{R}[X]\)-módulo, dependiendo de como sea \(T\). Poner un ejemplo de
+  \(T\) para que se alcance cada longitud.}\\
+
+Notemos primero que la noción de submódulo equivale a subgrupo cerrado bajo la
+acción del anillo, y los únicos subgrupos que tenemos son
+
+\[
+   \langle (1,0,0) \rangle \hspace{1cm}  \langle (0,1,0) \rangle \hspace{1cm} \langle (0,0,1) \rangle
+\]
+\[
+  \langle (1,0,0),(0,1,0) \rangle \hspace{1cm}\langle (1,0,0),(0,0,1) \rangle \hspace{1cm}\langle (0,0,1),(0,1,0) \rangle
+\]
+
+
+Por ello, la mayor cadena de subgrupos maximales que vamos a
+poder obtener será de longitud 3, por ejemplo,
+
+\[
+  0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0),(0,1,0) \rangle
+  \subset \mathbb{R}^3
+\]
+que sean submódulos o no dependerá de \(T\). Por ejemplo, si tomamos \(T = id\),
+entonces estamos ante una serie de composición de \(\mathbb{R}^3\) como
+\(\mathbb{R}[X]\)-módulo.
+
+Pero si tomamos \(T\) tal que la imagen de cualquiera de los generadores sea
+\((1,0,0)\), entonces el único submódulo que tenemos es \(\langle (1,0,0)
+\rangle\), luego tendríamos la serie de composición
+\[
+  0 \subset \langle (1,0,0) \rangle \subset \mathbb{R}^3
+\]
+
+lo que nos daría una longitud de 2.
+
+Por último, si hacemos que \(T\) permite los elementos de la base, entonces no
+habría ningun submódulo propio y tendríamos una longitud de 1.
