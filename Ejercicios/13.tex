@@ -1,0 +1,21 @@
+\section{Ejercicio 13.}%
+\label{sec:ejercicio_13_}
+
+\textit{Para cada \(A\)-módulo \(M\), demostrar que el conjunto \(End_A(M)\) es un subanillo de \(End(M)\). Demostrar que si, además, \(M\) es libre con base \(m_1, \dots, m_n\), entonces \(End_A(M)^{op}\) es isomorfo, como anillo, a  \(M_n(A)\). Discutir qué ocurre cuando  \(A\) es un álgebra sobre un cuerpo \(K\)}.
+
+Veamos que \(End_A(M)\) es un subanillo. Sean \(f,g \in End_A(M)\). Entonces
+\begin{itemize}
+    \item \((f+g)(am) = f(am) + g(am) = a(f(m) + g(m)) = a(f+g)(m)\)
+    \item \((fg)(am) = f(g(am)) = a(f(g(m)))= a(fg)(m) \)
+    \item \(id(am) = am = a(id)(m)\)
+\end{itemize}.
+
+Ahora, por \(m_1, \dots, m_n\) base de \(M\), dado \(f \in End_A(M)\), podemos realizar el procedimiento similar al que utilzamos para aplicaciones lineales en espacios vectoriales, definiendo el morfismo \(\varphi: End_A(M)^{op} \rightarrow M_n(A) con\):
+\[
+\varphi(f) = (a_{ij})^t =: \Lambda_f
+\]
+donde \(a_{ij}\) viene dado por \(f(m_j) = \sum_i a_{ij} m_i\). La inversa sería, dada una matriz, el endomorfismo asociado a su transpuesta (de manera análoga a como se hace para aplicaciones lineales de espacios vectoriales). Para ver que son morfismo de anillos únicamente probaremos que respetan el producto, pues el resto de propiedades son inmediatas. Sean \(f, g \in End_A(M)^{op}\),
+
+\[
+    \varphi(f*g) = \varphi(g \circ f) = (\Lambda_g * \Lambda_f)^t = (\Lambda_f)^t * (\Lambda_g)^t = \varphi(f) * \varphi(g)
+.\]
