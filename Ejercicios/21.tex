@@ -1,0 +1,20 @@
+\section{Ejercicio 21. } \textit{Sea \(\mathbb{P}_n\) el espacio vectorial real
+  de las funcione polinómicas en una variable de grado menor o igual que \(n\).
+  Sea \(T: \mathbb{P}_n \to \mathbb{P}_n\) la aplicación lineal que asigna a
+  cada polinomio su derivada. Calcular una serie de composición de
+  \(\mathbb{P}_n\) visto como \(\mathbb{R}[X]\)-módulo via \(T\)}.\\
+
+Consideremos los espacios vectoriales \(\mathbb{P}_{n-1},\dots,\mathbb{P}_0\),
+es claro que \(\mathbb{P}_i \subset \mathbb{P}_{i+1}\) es un subgrupo y es
+cerrado bajo derivación, luego es un submódulo. Esto nos permite crear la cadena
+
+\[
+  0 \subset \mathbb{P}_0 \subset \dots \subset \mathbb{P}_n
+\]
+
+Solo nos queda comprobar que cada eslabón este formado por un submódulo maximal,
+tomamos \(\mathbb{P}_i \subset \mathbb{P}_{i+1}\),  y añadamos un polinomio \(p\) de
+grado \(i+1\) a \(\mathbb{P}_i \), entonces es claro que con las operaciones de
+grupo podemos construir cualquier polinomio de grado \(i+1\), luego \(\langle
+(p, \mathbb{P}_i) \rangle = \mathbb{P}_{i+1}\). Por lo tanto, los eslabones son
+maximales y tenemos una serie de composición.
