@@ -2,3 +2,28 @@
   todos los \(\mathbb{R}[X]\)-submódulos de \(\mathbb{P}_n\).}\\
 
 Como hemos visto en el apartado anterior, disponemos de \(\{\mathbb{P}_i\}_{i=0,\dots,n}\)
+Comprobemos que no tenemos otros submódulos, notemos que estamos buscando
+subgrupos cerrados bajo la acción de \(\mathbb{R}[X]\), de forma que, potencias
+de \(x\) actúan derivando el polinomio el número de veces que indique el
+exponente, y los números reales actúan multiplicándose por los polinomios.
+
+Es decir, si tomamos \(f = a_0 + a_1x + \dots + a_qx^q \in \mathbb{R}[X]\), actúa
+sobre un polinomio \(p \in \mathbb{P}_n\), de la forma
+\[
+  f \star p = a_0p + a_1p^{(1)} + \dots + a_qp^{(q)}
+\]
+donde \(p^{(i)}\) denota la derivada \(i\)-ésima de \(p\).
+
+Supongamos entonces que queremos ver cuál es el menor submódulo que contiene a
+\(p\).  Notamos que al tener \(p\), tenemos todos sus polinomios proporcionales
+y todas sus derivadas, luego tenemos un polinomio de cada grado hasta el 0.
+Supongamos que el grado de \(p\) es \(m\), entonces existen unos coeficientes
+reales \(b_i \in \mathbb{R}\) tal que
+
+\[
+  x^m = b_0p + b_1p^{(1)}+ \dots + b_mp^{(m)}
+\]
+Luego \(x^m\), está en nuestro submódulo, de igual forma están todos los \(x^i\)
+para \(i = 0,\dots,m\), luego el submódulo resulta ser \(\mathbb{P}_m\).
+
+Por ello estos son todos los submódulos que tenemos.
