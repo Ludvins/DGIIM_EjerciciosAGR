@@ -5,3 +5,51 @@
   \(\mathbb{R}[X]\)-módulo, dependiendo de como sea \(T\). Poner un ejemplo de
   \(T\) para que se alcance cada longitud.}\\
 
+Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre \(mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles longitudes son:
+\begin{itemize}
+    \item 2. Supuesto que no podemos encontrar ningún submódulo distinto del total o el vacío.
+    \item 3. En cuyo caso, el subespacio asociado al submódulo podrá ser de dimensión 1 o 2.
+    \item 4. En cuyo caso, tendremos un subespacio de dimensión 1, y otro de dimensión 2.
+\end{itemize}
+
+A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rightarrow \mathbb{R}^3\) que genere un módulo de cada una de las posibles longitudes.
+Para dar la aplicación lineal únicamente tendremos que definir la imagen de una base de nuestro espacio, y por tanto utilizaremos la base usual
+\(\{(1,0,0), (0,1,0), (0,0,1)\) por comodidad.\\
+
+\textbf{Longitud 2}%
+
+ESTO ESTÁ MAL
+\[
+T:\mathbb{R}^3: \rightarrow \mathbb{R}^3
+\]
+tal que
+\[
+T((1,0,0)) = (0,1,0),
+\]
+\[
+T((0,1,0)) = (0,0,1),
+\]
+\[
+T((0,0,1)) = (1,0,0)
+.\]
+Es facil ver que la dimesión de cualquier submódulo distinto del \({0}\) tiene que ser el total, pues en cuanto tengas un vector distinto del vacío, aplicando \(T\) una y dos veces obtiene.
+
+\textbf{Longitud 3}
+\[
+T:\mathbb{R}^3: \rightarrow \mathbb{R}^3
+\]
+tal que
+\[
+T((1,0,0)) = (1,0,0),
+\]
+\[
+T((0,1,0)) = (0,0,1),
+\]
+\[
+T((0,0,1)) = (0,1,0)
+.\]
+
+Con esto, la cadena de longitud 3 sería:
+\[
+{0} \subset <(0,1,0), ()
+.\]
