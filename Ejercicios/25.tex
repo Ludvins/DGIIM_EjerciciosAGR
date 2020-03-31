@@ -1,0 +1,17 @@
+\section{Ejercicio 25. **}
+\textit{Supongamos \(T:V \rightarrow V\) un endomorfismo K-lineal, donde V es un espacio vectorial de dimensión finita que consideramos, como de costumbre, como un \(K[X]\)-módulo. Supongamos que el polinomio mínimo  \(m(X)\) de  \(T\) es irreducible en  \(K[X]\). Demostrar que existen  \(K[X]\)-submódulos simples \(V_1, \dots, V_t\) de \(V\) tales que  \(V = V_1 \oplus \dots \oplus V_t\) como \(K[X]\)-módulo.} \\
+
+Por \(m(X)\) irreducible, tenemos que \(K[X]/Ker\ e_T = K[X]/m(X)\) es un cuerpo. Entonces, podemos ver \(V\) como un \(K[X]/Ker\ e_T\) espacio vectorial, utilizando la misma acción que utilizamos para la estructura de \(K[X]\)-módulo. Para ello, tenemos que comprobar que la acción está bien definida. En efecto, sean \(p(X), q(X)\) pertencientes a una misma clase del cociente. Entonces
+
+\[
+p(X) = q(X) + r(X)m(X)
+,\]
+y por tanto
+\[
+p(T) = q(T) + r(T)m(T) = q(T)
+\]
+por \(m(X) \in Ker\ e_T\).\\
+
+Ahora, sea \(\{v_i : i \in I\} \subset V\) un conjunto de generadores de \(V\), por el corolario 1.6.6 existe \(J \in I\) tal que \(V = \oplus_{j \in J} (K[X]/Ker\ e_T)v_j\), siendo cada uno de estos submódulos simples. Ahora, volviendo a ver \(V\) como  \(K[X]\)-módulo, los submódulos \(K[X]v_j\) para \(j \in J\) son simples, pues en caso de tener un súbmodulo propio \(M\), este sería también submódulo de \((K[X]/Ker\ e_T)v_j\).\\
+
+Por tanto, tenemos que \(V = \sum_{j \in J} K[X]v_j\), con \(K[X] v_j\) simple para todo \(j\) en  \(J\). Al igual que hicimos en el corolario 1.6.6, aplicamos la Proposición (TODO Esto tiene que ser así pero no lo entiendo) para obtener un \(K\) tal que  \(V = \oplus_{k \in K}K[X]v_k\).
