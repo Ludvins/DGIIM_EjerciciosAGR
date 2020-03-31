@@ -9,8 +9,13 @@ Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre
 \(\mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles
 longitudes son \(2,3\) o \(4\).\\
 
-Veamos que, para cualquier espacio real de dimensión \(n\), y cualquier operador lineal \(T\), debe existir un subespacio invariante por \(T\) ya sea de dimensión 1 o dimensión 2.
-Si tomamos un vector no nulo \(v \in \mathbb{R}^3\), sabemos que existen unos
+Veamos que, para cualquier espacio real de dimensión \(n\), y cualquier operador
+lineal \(T\), debe existir un subespacio invariante por \(T\) ya sea de
+dimensión 1 o dimensión 2, donde un subespacio invariante es equivalente a ser
+un submódulo, esto nos permitirá descartar el caso en el que no exista ningún
+submódulo y la longitud sea 2.\\
+
+Si tomamos un vector no nulo \(v \in \mathbb{R}^n\), sabemos que existen unos
 coeficientes reales \(a_0, \dots, a_n\) tal que
 \[
   0 = a_0v + \dots + a_nT^n(v) = (a_0I + \dots + a_nT^n)(v)
@@ -20,13 +25,21 @@ Como el polinomio no es inyectivo, alguno de dichos factores debe no serlo.
 \begin{itemize}
 \item \textbf{Caso 1.} Un factor de grado 1 no es inyectivo, sea este factor de la
   forma \(T - \lambda I\), \(\exists u \in \mathbb{R}^3\) tal que \((T - \lambda
-  I)(u) = 0 \implies T(u) = \lambda u \ \implies \ \langle u \rangle\) es
-  invariante por \(T\). Notamos además que \(u\) es un vector propio.
+  I)(u) = 0 \implies T(u) = \lambda u \ \implies \ \langle u \rangle\) es un submódulo. Notamos además que \(u\) es un vector propio.
 \item \textbf{Caso 2.} Un factor de grado 2 no es inyectivo, sea ese factor
   \(T^2 + \alpha T + \beta I\), \(\exists u \in \mathbb{R}^3\) tal que \((T^2 +
   \alpha T + \beta I)(u)= 0\). Sea entonces \(U = <u,T(u)>\), como \(T^2(u) =
-  -\alpha T(u) - \beta u \), \(U\) es un subespacio invariante bajo \(T\).
+  -\alpha T(u) - \beta u \), \(U\) es un submódulo.
 \end{itemize}
+Notamos que como polinomio podemos utilizar el polinomio característico de la
+aplicación.\\
+
+Además es facil comprobar que todos los submódulos se generan de
+esta forma, pues sea \(\langle u \rangle = U\) un submódulo, se tiene que \(T(u)
+\in U \implies \exists a \in \mathbb{R}\) tal que \(T(u) = au\), luego \(u\) es un
+vector propio. En caso de ser \(U = \langle u , v \rangle\), si ninguno de ellos
+es un vector propio, entonces \(T(u)\) y \(u\) son linealmente independientes y
+\(T(u) \in U \implies U = \langle u , T(u) \rangle\).\\
 
 Como estamos en \(\mathbb{R}^3\), la descomposición en irreducibles del
 polinomio característico de \(T\) contiene un polinomio de grado 1, luego
@@ -35,16 +48,18 @@ siempre existe un vector propio.\\
 Nos limitamos a 2 casos en el estudio de la longitud (los casos
 anteriores no son excluyentes), a saber
 \begin{itemize}
-\item Existe un valor propio \(u\) y no existe ningún espacio de la forma \(<u, T(u)>\) invariante por T. Entonces tenemos la serie de composición
+\item Existe un valor propio \(u\) y no existe ningún espacio de la forma
+  \(\langle u, T(u)\rangle \) invariante por T. Entonces tenemos la serie de composición
   \[
-    0 \subset \langle u \rangle \subset \mathbb{R}
+    0 \subset \langle u \rangle \subset \mathbb{R}^3
   \]
   luego la longitud es 3.
-\item Existe un espacio invariante bajo T \(\langle u, T(u) \rangle\), tal que \(u\) es
-  un vector propio, tenemos entonces
+\item Nuestro vector propio \(u\), se encuentra dentro de un submódulo de
+  dimensión 2 \(\langle v, T(v) \rangle\), tenemos entonces
   \[
-    0 \subset \langle u \rangle \subset \langle u, T(u) \rangle\ \subset \mathbb{R}^3
+    0 \subset \langle u \rangle \subset \langle v, T(v) \rangle\ \subset \mathbb{R}^3
   \]
+  luego la longitud es 4.
 \end{itemize}
 
 A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rightarrow \mathbb{R}^3\) que genere un módulo de cada una de las posibles longitudes.
@@ -58,8 +73,9 @@ Para dar la aplicación lineal únicamente tendremos que definir la imagen de un
   x &\mapsto x
 \end{aligned}
 \]
-Es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
-\(\mathbb{R}[X]\)-submódulo, luego tenemos la siguiente cadena
+
+En este caso, todos los vectores son vectores propios luego es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
+\(\mathbb{R}[X]\)-submódulo, la siguiente serie de composición nos da la longitud.
 \[
         0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0), (0,1,0)
         \rangle \subset \mathbb{R}^3
@@ -75,20 +91,10 @@ Es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
 \end{aligned}
 \]
 
-En este caso, vemos que que el único subespacio de dimensión 1 que es un
-submódulo, resulta \(\langle (1,1,1) \rangle\), tomemos ahora un vector
-linealmente independiente \(\alpha\).
-
-\[
-  \begin{aligned}
-  T(a(1,1,1) + b\alpha) &= a(1,1,1) + bT(\alpha_1(1,0,0) + \alpha_2(0,1,0) +
-  \alpha_3(0,0,1))\\
-  &= a(1,1,1) + b(\alpha_3, \alpha_1, \alpha_2) \not \in
-  \langle(1,1,1),\alpha\rangle
-  \end{aligned}
-\]
-
-Luego \(\langle (1,1,1)\rangle\) es el único submodulo que tenemos
+En este caso se puede calcular que el polinomio característico de la aplicación
+es \(-x^3 + 1 = -(x-1)(x^2+x+1)\), luego tenemos un único vector propio, en este
+caso es \(u = (1,1,1)\). Además, \(T^2 + T +Id = 3Id\) que es inyectiva, luego
+no existe ningún submodulo de dimensión 2.
 
 \[
         0 \subset \langle (1,1,1) \rangle \subset \mathbb{R}^3
