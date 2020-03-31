@@ -5,51 +5,66 @@
   \(\mathbb{R}[X]\)-módulo, dependiendo de como sea \(T\). Poner un ejemplo de
   \(T\) para que se alcance cada longitud.}\\
 
-Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre \(mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles longitudes son:
-\begin{itemize}
-    \item 2. Supuesto que no podemos encontrar ningún submódulo distinto del total o el vacío.
-    \item 3. En cuyo caso, el subespacio asociado al submódulo podrá ser de dimensión 1 o 2.
-    \item 4. En cuyo caso, tendremos un subespacio de dimensión 1, y otro de dimensión 2.
-\end{itemize}
+Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre
+\(\mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles
+longitudes son \(2,3\) o \(4\).\\
+
+Como estamos tatando con \(\mathbb{R}\) un cuerpo algebraicamente cerrado,
+sabemos que \(T\) tiene al menos un vector propio. Estos vectores propios son
+los que nos marcarán la longitud de \(\mathbb{R}^3\), ya que generan subespacios
+vectoriales invariantes por \(T\), es decir, submódulos.\\
+
+En caso de tener \(2\) o \(3\) vectores propios, esta claro que tenemos al menos
+un subespacio de dimensión \(1\) y otro de dimensión \(2\) invariantes por
+\(T\), luego podríamos construir una serie de composición de longitud 4.\\
+
+En caso de tener un único vector propio, solo existe un subespacio invariante,
+luego podemos construir una serie de composición de longitud 3.\\
+
 
 A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rightarrow \mathbb{R}^3\) que genere un módulo de cada una de las posibles longitudes.
 Para dar la aplicación lineal únicamente tendremos que definir la imagen de una base de nuestro espacio, y por tanto utilizaremos la base usual
 \(\{(1,0,0), (0,1,0), (0,0,1)\) por comodidad.\\
 
-\textbf{Longitud 2}%
+\textbf{Longitud 4}%
+\[
+\begin{aligned}
+  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
+  x &\mapsto x
+\end{aligned}
+\]
+Es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
+\(\mathbb{R}[X]\)-submódulo, luego tenemos la siguiente cadena
+\[
+        0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0), (0,1,0)
+        \rangle \subset \mathbb{R}^3
+\]
 
-ESTO ESTÁ MAL
+\textbf{Longitud 3}%
 \[
-T:\mathbb{R}^3: \rightarrow \mathbb{R}^3
+\begin{aligned}
+  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
+  (1,0,0) &\mapsto (0,1,0)\\
+  (0,1,0) &\mapsto (0,0,1)\\
+  (0,0,1) &\mapsto (1,0,0)
+\end{aligned}
 \]
-tal que
-\[
-T((1,0,0)) = (0,1,0),
-\]
-\[
-T((0,1,0)) = (0,0,1),
-\]
-\[
-T((0,0,1)) = (1,0,0)
-.\]
-Es facil ver que la dimesión de cualquier submódulo distinto del \({0}\) tiene que ser el total, pues en cuanto tengas un vector distinto del vacío, aplicando \(T\) una y dos veces obtiene.
 
-\textbf{Longitud 3}
-\[
-T:\mathbb{R}^3: \rightarrow \mathbb{R}^3
-\]
-tal que
-\[
-T((1,0,0)) = (1,0,0),
-\]
-\[
-T((0,1,0)) = (0,0,1),
-\]
-\[
-T((0,0,1)) = (0,1,0)
-.\]
+En este caso, vemos que que el único subespacio de dimensión 1 que es un
+submódulo, resulta \(\langle (1,1,1) \rangle\), tomemos ahora un vector
+linealmente independiente \(\alpha\).
 
-Con esto, la cadena de longitud 3 sería:
 \[
-{0} \subset <(0,1,0), ()
-.\]
+  \begin{aligned}
+  T(a(1,1,1) + b\alpha) &= a(1,1,1) + bT(\alpha_1(1,0,0) + \alpha_2(0,1,0) +
+  \alpha_3(0,0,1))\\
+  &= a(1,1,1) + b(\alpha_3, \alpha_1, \alpha_2) \not \in
+  \langle(1,1,1),\alpha\rangle
+  \end{aligned}
+\]
+
+Luego \(\langle (1,1,1)\rangle\) es el único submodulo que tenemos
+
+\[
+        0 \subset \langle (1,1,1) \rangle \subset \mathbb{R}^3
+\]
