@@ -9,10 +9,47 @@ Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre
 \(\mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles
 longitudes son \(2,3\) o \(4\).\\
 
-Como estamos tatando con \(\mathbb{R}\) un cuerpo algebraicamente cerrado,
-sabemos que \(T\) tiene al menos un vector propio. Estos vectores propios son
-los que nos marcarán la longitud de \(\mathbb{R}^3\), ya que generan subespacios
-vectoriales invariantes por \(T\), es decir, submódulos.\\
+Veamos que debe existir un subespacio invariante por \(T\) ya sea de dimensión 1
+o dimensión 2.
+Si tomamos un vector no nulo \(v \in \mathbb{R}^3\), sabemos que existen unos
+coeficientes reales \(a_0, \dots, a_n\) tal que
+\[
+  0 = a_0v + \dots + a_nT^n(v) = (a_0I + \dots + a_nT^n)(v)
+\]
+
+Factoriamos este polinomio en \(T\) en factores irreducibles de grado 1 y 2.
+Como el polinomio no es inyectivo, alguno de dichos factores debe no serlo.
+\begin{itemize}
+\item \textbf{Caso 1.} Un factor de grado 1 no es inyectivo, sea este factor de la
+  forma \(T - \lambda I\), \(\exists u \in \mathbb{R}^3\) tal que \((T - \lambda
+  I)(u) = 0 \implies T(u) = \lambda u \ \implies \ \langle u \rangle\) es
+  invariante por \(T\). Notamos además que \(u\) es un vector propio.
+\item \textbf{Caso 2.} Un factor de grado 2 no es inyectivo, sea ese factor
+  \(T^2 + \alpha T + \beta I\), \(\exists u \in \mathbb{R}^3\) tal que \((T^2 +
+  \alpha T + \beta I)(u)= 0\). Sea entonces \(U = <u,T(u)>\), como \(T^2(u) =
+  -\alpha T(u) - \beta u \), \(U\) es un subespacio invariante bajo \(T\).
+  Llamaremos a \(u, T(u)\) espacio propio por comodidad en la redacción.
+\end{itemize}
+
+Como estamos en \(\mathbb{R}^3\), la descomposición en irreducibles del
+polinomio característico de \(T\) contiene un polinomio de grado 1, luego
+siempre existe un vector propio.\\
+
+Nos limitamos  a 3 casos en el estudio de la longitud (los casos
+anteriores no son excluyentes), a saber
+\begin{itemize}
+\item Existe un valor propio \(u\) y no existe ningún espacio propio. Entonces
+  tenemos la serie de composición
+  \[
+    0 \subset \langle u \rangle \subset \mathbb{R}
+  \]
+  luego la longitud es 3.
+\item Existe un espacio propio \(\langle u, T(u) \rangle\), tal que \(u\) es
+  un vector propio, tenemos entonces
+  \[
+    0 \subset \langle u \rangle \subset \langle u, T(u) \rangle\ \subset \mathbb{R}^3
+  \]
+\end{itemize}
 
 En caso de tener \(2\) o \(3\) vectores propios, esta claro que tenemos al menos
 un subespacio de dimensión \(1\) y otro de dimensión \(2\) invariantes por
