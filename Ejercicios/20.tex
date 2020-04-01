@@ -45,21 +45,26 @@ Como estamos en \(\mathbb{R}^3\), la descomposición en irreducibles del
 polinomio característico de \(T\) contiene un polinomio de grado 1, luego
 siempre existe un vector propio.\\
 
-Nos limitamos a dos casos en el estudio de la longitud (los casos
+Nos limitamos a tres casos en el estudio de la longitud (los casos
 anteriores no son excluyentes), a saber
 \begin{itemize}
-\item Existe un valor propio \(u\) y no existe ningún espacio de la forma
-  \(\langle v, T(v)\rangle \) que contenga a u invariante por T. Entonces tenemos la serie de composición
+\item Existe un único valor propio, y para el vector propio asociado \(u\)  no existe ningún espacio de la forma
+  \(\langle v, T(v)\rangle \) que contenga a \(u\), invariante por \(T\). Entonces tenemos la serie de composición
   \[
     0 \subset \langle u \rangle \subset \mathbb{R}^3
   \]
   luego la longitud es 3.
-\item Nuestro vector propio \(u\), se encuentra dentro de un submódulo de
+\item Existe un único valor propio, y el vector propio asociado \(u\) se encuentra dentro de un submódulo de
   dimensión 2 \(\langle v, T(v) \rangle\), tenemos entonces
   \[
     0 \subset \langle u \rangle \subset \langle v, T(v) \rangle\ \subset \mathbb{R}^3
   \]
   luego la longitud es 4.
+\item Existen 3 valores propios, en cuyo caso, tomando dos vectores propios \(u,v\), tenemos que
+\[
+0 \subset \langle u \rangle \subset \langle u, v \rangle \subset \mathbb{R}^3
+\]
+luego la longitud es 4.
 \end{itemize}
 
 A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rightarrow \mathbb{R}^3\) que genere un módulo de cada una de las posibles longitudes.
@@ -75,7 +80,7 @@ Para dar la aplicación lineal únicamente tendremos que definir la imagen de un
 \]
 
 En este caso, todos los vectores son vectores propios luego es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
-\(\mathbb{R}[X]\)-submódulo, la siguiente serie de composición nos da la longitud.
+\(\mathbb{R}[X]\)-submódulo, la siguiente serie de composición nos da la longitud buscada.
 \[
         0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0), (0,1,0)
         \rangle \subset \mathbb{R}^3
@@ -92,9 +97,7 @@ En este caso, todos los vectores son vectores propios luego es sencillo comproba
 \]
 
 En este caso se puede calcular que el polinomio característico de la aplicación
-es \(-x^3 + 1 = -(x-1)(x^2+x+1)\), luego tenemos un único vector propio, en este
-caso es \(u = (1,1,1)\). Además, \(T^2 + T +Id = 3Id\) que es inyectiva, luego
-no existe ningún submodulo de dimensión 2.
+es \(-x^3 + 1 = -(x-1)(x^2+x+1)\), luego tenemos un único vector propio, \(u = (1,1,1)\). Además, \(T^2 + T +Id = 3Id\) es inyectiva, luego no existe ningún submodulo de dimensión 2.
 
 \[
         0 \subset \langle (1,1,1) \rangle \subset \mathbb{R}^3
