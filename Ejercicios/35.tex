@@ -1,7 +1,7 @@
 \section{Ejercicio 35. **} \textit{Sea \(V\) un \(K\)-espacio
   vectorial de dimensión finita \(n\) y \(T:V \to V\) una
   aplicación lineal. Diremos que un vector \(v \in V\) es cíclico para
-  \(\mathcal{T}\) si \(\{v, T(v), \dots, T^{n-1}(v)\}\) es una base de \(V\)
+  \(T\) si \(\{v, T(v), \dots, T^{n-1}(v)\}\) es una base de \(V\)
   como \(K\)-espacio vectorial. Demostrar que \(V\) admite un vector cíclico si,
   y sólo si, el polinomio mínimo de \(T\) tiene grado \(n\). ¿Cuál es entonces
   la longitud de \(V\) en tanto que \(K[X]\)-módulo.}\\
@@ -16,7 +16,11 @@ luego no puede existir un vector cíclico.\\
 
 Veamos ahora que si el polinomio mínimo tiene grado \(n\), entonces existe un
 vector cíclico. Notamos que si el grado del polinomio mínimo es \(n\), entonces
-coincide con el polinomio característico. Sea \(\bar{N}\) la matriz compañera de
-ambos y \(\{\alpha_1, \dots, \alpha_n\}\) una base de \(V\).
+coincide con el polinomio característico. Sea \(N\) la matriz compañera de
+ambos. Sea \(\{e_1,\dots,e_n\}\) la base usual de \(V\), sabemos que la matriz
+compañera verifica que \(N^i e_1 = e_{i+1}\), luego, nuestro objetivo es
+verificar que existe una matriz de cambio de base \(P\), tal que \(P^{-1}TP =
+N\) visto \(T\) como matriz. En ese caso tendremos que sea \(v = P(e_1)\), el conjunto
+\(\{v,\dots,T^{n-1}v\}\) sería una base de \(V\), luego \(v\) sería un vector cíclico.
 
 \textbf{TODO. Terminar}
