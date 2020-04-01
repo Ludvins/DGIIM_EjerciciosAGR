@@ -1,7 +1,7 @@
 \section{Ejercicio 35. **} \textit{Sea \(V\) un \(K\)-espacio
   vectorial de dimensión finita \(n\) y \(T:V \to V\) una
   aplicación lineal. Diremos que un vector \(v \in V\) es cíclico para
-  \(\mathcal{T}\) si \(\{v, T(v), \dots, T^{n-1}(v)\}\) es una base de \(V\)
+  \(T\) si \(\{v, T(v), \dots, T^{n-1}(v)\}\) es una base de \(V\)
   como \(K\)-espacio vectorial. Demostrar que \(V\) admite un vector cíclico si,
   y sólo si, el polinomio mínimo de \(T\) tiene grado \(n\). ¿Cuál es entonces
   la longitud de \(V\) en tanto que \(K[X]\)-módulo.}\\
@@ -16,7 +16,43 @@ luego no puede existir un vector cíclico.\\
 
 Veamos ahora que si el polinomio mínimo tiene grado \(n\), entonces existe un
 vector cíclico. Notamos que si el grado del polinomio mínimo es \(n\), entonces
-coincide con el polinomio característico. Sea \(\bar{N}\) la matriz compañera de
-ambos y \(\{\alpha_1, \dots, \alpha_n\}\) una base de \(V\).
+coincide con el polinomio característico. Sea \(N\) la matriz compañera de
+ambos. Sea \(\{e_1,\dots,e_n\}\) la base usual de \(V\), sabemos que la matriz
+compañera verifica que \(N^i e_1 = e_{i+1}\), luego, nuestro objetivo es
+verificar que existe una matriz de cambio de base \(P\), tal que \(P^{-1}TP =
+N\) visto \(T\) como matriz. En ese caso tendremos que sea \(v = P(e_1)\), el conjunto
+\(\{v,\dots,T^{n-1}v\}\) sería una base de \(V\), luego \(v\) sería un vector
+cíclico.\\
+
+Veamos que dos matrices son similares si tienen el mismo polinomio mínimo, sean
+\(A, B\) las matrices similares tales que \(A = S^{-1}BS\), sea \(m_A\) el
+polinomio mínimo de \(A\), se tiene
+\[
+  0 = m_A(A) = m_A(S^{-1}BS) = S^{-1}m_A(B)S
+\]
+donde la última igualdad viene de evaluar el polinomio mínimo en \(S^{-1}BS\) y
+sacar factor común de cada término. Con esto tenemos que \(m_A\) anula \(B\), y
+de forma similar podemos ver que \(m_B\) anula a \(A\). Como los polinomios
+mínimos son los mónicos de menor grado que anulan a su matriz, \(m_A = m_B\).\\
+
+Veamos ahora que el polinomio mínimo se descompone en producto de factores
+lineales, para ello consideremos una matriz con un único bloque de Jordan \(J\)
+(una matriz y si forma canónica de Jordan son similares), el polinomio
+característico es de la forma \((t-\lambda)^n\) con \(\lambda\) el valor propio
+correspondiente, además como \((J - \lambda I)^k\neq 0 \ \forall k < n\), el
+polinomio mínimo \(m = (t-\lambda)^n\). Consideremos ahora que \(J\) es la
+matriz de Jordan formada por dos bloques sobre el mismo valor propio
+\(\lambda\), cada bloque de dimensiones \(n_1\) y \(n_2\) respectivamente y
+\(n_1 \geq n2\). El
+polinomio característico es \((t-\lambda)^{n_1+n_2}\), pero \((J-\lambda I)^{n_1}
+= 0\), luego el polinomio mínimo es \((t-\lambda)^{n_1}\). Esto nos permite
+concluir que el polinomio mínimo de una matriz de Jordan cualquiera es de la
+forma
+
+\[
+  m = \prod(t - \lambda_i)^{r_i}
+\]
+Donde \(\lambda_i\) son los valores propios y \(r_i\) el tamaño del mayor bloque correspondiente.\\
+
 
 \textbf{TODO. Terminar}
