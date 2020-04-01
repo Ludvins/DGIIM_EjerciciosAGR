@@ -71,21 +71,6 @@ A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rig
 Para dar la aplicación lineal únicamente tendremos que definir la imagen de una base de nuestro espacio, y por tanto utilizaremos la base usual
 \(\{(1,0,0), (0,1,0), (0,0,1)\) por comodidad.\\
 
-\textbf{Longitud 4}%
-\[
-\begin{aligned}
-  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
-  x &\mapsto x
-\end{aligned}
-\]
-
-En este caso, todos los vectores son vectores propios luego es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
-\(\mathbb{R}[X]\)-submódulo, la siguiente serie de composición nos da la longitud buscada.
-\[
-        0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0), (0,1,0)
-        \rangle \subset \mathbb{R}^3
-\]
-
 \textbf{Longitud 3}%
 \[
 \begin{aligned}
@@ -101,4 +86,28 @@ es \(-x^3 + 1 = -(x-1)(x^2+x+1)\), luego tenemos un único vector propio, \(u = 
 
 \[
         0 \subset \langle (1,1,1) \rangle \subset \mathbb{R}^3
+\]
+
+\textbf{Longitud 4 (Caso 1)}%
+\[
+\begin{aligned}
+  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
+  (1,0,0) &\mapsto (0,1,0)\\
+  (0,1,0) &\mapsto (1,0,0)\\
+  (0,0,1) &\mapsto (0,0,1)
+\end{aligned}
+\]
+\textbf{Longitud 4 (Caso 2)}%
+\[
+\begin{aligned}
+  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
+  x &\mapsto x
+\end{aligned}
+\]
+
+En este caso, todos los vectores son vectores propios luego es sencillo comprobar que cualquier subespacio de \(\mathbb{R}^3\) es un
+\(\mathbb{R}[X]\)-submódulo, la siguiente serie de composición nos da la longitud buscada.
+\[
+        0 \subset \langle (1,0,0) \rangle \subset \langle (1,0,0), (0,1,0)
+        \rangle \subset \mathbb{R}^3
 \]
