@@ -20,7 +20,7 @@ Supongamos ahora que el polinomio mínimo \(m\) tiene grado \(n\). Sea
 \]
 la descomposición de \(m\) en factores irreducibles y consideremos
 \[
-  V_i = Ker(m_i(T)) = \{v \in V \ | \ m_i^{n_i}(T)(v) = 0\}
+  V_i = Ker(m_i^{n_i}(T)) = \{v \in V \ | \ m_i^{n_i}(T)(v) = 0\}
 \]
 Utilizando un proceso inductivo en la proposición del ejercicio 26, podemos ver
 que \(V = \oplus_i V_i\), además, es sencillo comprobar que son submódulos de \(V\) puesto que \(T\) y \(m_i^{n_i}(T)\)
@@ -31,11 +31,11 @@ tendríamos un polinomio que anula todo \(V\) de grado menor \(n\).\\
 
 Entonces existe \(v_i \not \in Ker(m_i^{n_i-1}(T)) \ \forall i\).\\
 
-Si alguno de estos \(v_i\) se anulara en un \(m_j^{n_j}(T)\) con \(i \neq j\),
-entonces el polinomio mínimo de \(\langle v_i \rangle\) divide a \(m_j^{n_j}\) y
-\(m_i^{n_i}\), que como son primos relativos resulta ser 1, luego \(v_i = 0\).
+Si algún de estos \(v \in V_i\) se anulara en un \(m_j(T)\) con \(i \neq j\),
+entonces el polinomio mínimo de \(\langle v \rangle\) divide a \(m_j\) y
+\(m_i^{n_i}\), que como son primos relativos resulta ser 1, luego \(v = 0\).
 
-Consideramos entonces \(x = \oplus_i v_i\), tenemos que ningún divisor de \(m\)
+Consideramos entonces \(x = \sum_i v_i\), tenemos que ningún divisor de \(m\)
 evaluado en \(T\) anula a \(x\). Entonces \(x\) es un vector que solo se anula
 por \(m\) y múltiplos suyos, luego polinomio de menor grado evaluado en \(T\) y
 en \(x\) no resulta 0. Es decir, \(\{x, T(x), \dots, T^{n-1}(x)\}\)
