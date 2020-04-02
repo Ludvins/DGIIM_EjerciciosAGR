@@ -7,13 +7,13 @@
 
 Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre
 \(\mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles
-longitudes son \(2,3\) o \(4\).\\
+longitudes son \(1,2\) o \(3\).\\
 
 Veamos que, para cualquier espacio real de dimensión \(n\), y cualquier operador
 lineal \(T\), debe existir un subespacio invariante por \(T\) ya sea de
 dimensión 1 o dimensión 2, donde un subespacio invariante es equivalente a ser
 un submódulo, esto nos permitirá descartar el caso en el que no exista ningún
-submódulo y la longitud sea 2.\\
+submódulo y la longitud sea 1.\\
 
 Si tomamos un vector no nulo \(v \in \mathbb{R}^n\), sabemos que existen unos
 coeficientes reales \(a_0, \dots, a_n\) tal que
@@ -31,8 +31,6 @@ Como el polinomio no es inyectivo, alguno de dichos factores debe no serlo.
   \alpha T + \beta I)(u)= 0\). Sea entonces \(U = <u,T(u)>\), como \(T^2(u) =
   -\alpha T(u) - \beta u \), \(U\) es un submódulo.
 \end{itemize}
-Notamos que como polinomio podemos utilizar el polinomio característico de la
-aplicación.\\
 
 Además es facil comprobar que todos los submódulos se generan de
 esta forma, pues sea \(\langle u \rangle = U\) un submódulo, se tiene que \(T(u)
@@ -53,25 +51,25 @@ anteriores no son excluyentes), a saber
   \[
     0 \subset \langle u \rangle \subset \mathbb{R}^3
   \]
-  luego la longitud es 3.
+  luego la longitud es 2.
 \item Existe un único valor propio, y el vector propio asociado \(u\) se encuentra dentro de un submódulo de
   dimensión 2 \(\langle v, T(v) \rangle\), tenemos entonces
   \[
     0 \subset \langle u \rangle \subset \langle v, T(v) \rangle\ \subset \mathbb{R}^3
   \]
-  luego la longitud es 4.
+  luego la longitud es 3.
 \item Existen 3 valores propios, en cuyo caso, tomando dos vectores propios \(u,v\), tenemos que
 \[
 0 \subset \langle u \rangle \subset \langle u, v \rangle \subset \mathbb{R}^3
 \]
-luego la longitud es 4.
+luego la longitud es 3.
 \end{itemize}
 
 A continuación mostramos un ejemplo de aplicación lineal \(T:\mathbb{R}^3 \rightarrow \mathbb{R}^3\) que genere un módulo de cada una de las posibles longitudes.
 Para dar la aplicación lineal únicamente tendremos que definir la imagen de una base de nuestro espacio, y por tanto utilizaremos la base usual
 \(\{(1,0,0), (0,1,0), (0,0,1)\) por comodidad.\\
 
-\textbf{Longitud 3}%
+\textbf{Longitud 2}%
 \[
 \begin{aligned}
   T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
@@ -81,23 +79,22 @@ Para dar la aplicación lineal únicamente tendremos que definir la imagen de un
 \end{aligned}
 \]
 
-En este caso se puede calcular que el polinomio característico de la aplicación
-es \(-x^3 + 1 = -(x-1)(x^2+x+1)\), luego tenemos un único vector propio, \(u = (1,1,1)\). Además, \(T^2 + T +Id = 3Id\) es inyectiva, luego no existe ningún submodulo de dimensión 2.
 
+En este caso tenemos un único valor propio, luego hay un único vector propio \(u = (1,1,1)\), luego tenemos un
+submódulo de dimensión 1 generado por el mismo. Veamos que no se encuentra
+incluido dentro de ningún submódulo de dimensión 2.
+Supongamos que \(\exists \alpha\) linealmente independiente con \(u\), tal que
+\(\langle u, \alpha \rangle\) es un submódulo de dimensión 2. Consideremos
+entondes
+\[
+  T(\alpha) = (\alpha_3, \alpha_1, \alpha_2) \not \in \langle u , \alpha \rangle
+\]
+Con esto tenemos que la serie de composición sería
 \[
         0 \subset \langle (1,1,1) \rangle \subset \mathbb{R}^3
 \]
 
-\textbf{Longitud 4 (Caso 1)}%
-\[
-\begin{aligned}
-  T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\
-  (1,0,0) &\mapsto (0,1,0)\\
-  (0,1,0) &\mapsto (1,0,0)\\
-  (0,0,1) &\mapsto (0,0,1)
-\end{aligned}
-\]
-\textbf{Longitud 4 (Caso 2)}%
+\textbf{Longitud 3}%
 \[
 \begin{aligned}
   T:\mathbb{R}^3 &\rightarrow \mathbb{R}^3\\

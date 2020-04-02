@@ -1,0 +1,18 @@
+\section{Ejercicio 26. **} \textit{En las condiciones del ejercicio anterior,
+  demostrar que el polinomio característico de \(T\) es \(m(X)^t\)}.\\
+
+Comencemos viendo que si \(f = gh\), son 3 polinomios donde \(g,h\) son
+coprimos, entonces
+\[
+  Ker(f(T)) = Ker(g(T)) \oplus Ker(h(T))
+\]
+Comencemos notando que \(Ker(g(T)), Ker(h(T)) \in Ker(f(T))\) y \(Ker(g(T)) +
+Ker(h(T)) \in Ker(f(T))\).\\ Por ser coprimos, existen polinomios \(u,v\) tales
+que
+\[
+  1 = gu + hv \implies Id = u(T)g(T) + v(T)h(T)
+\]
+Tomemos entonces \(\alpha \in Ker(f(T))\), tenemos \(\alpha = u(T)g(T)\alpha +
+v(T)h(T)\alpha\).
+Donde  \( u(T)g(T)\alpha \in Ker(h(T))\) y  \( v(T)h(T)\alpha \in Ker(g(T))\),
+luego concluimos que \(Ker(f(T)) = Ker(g(T)) + Ker(h(T))\).
