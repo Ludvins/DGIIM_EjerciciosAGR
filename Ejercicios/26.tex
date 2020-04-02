@@ -3,7 +3,7 @@
 
 Probemos la siguiente proposición
 
-\textbf{Proposición. }Sean \(f,g,h \in K[X]\) tales que \(f = gh\), y \(g,h\) son
+\textbf{Proposición 1. }Sean \(f,g,h \in K[X]\) tales que \(f = gh\), y \(g,h\) son
 coprimos, entonces
 \[
   Ker(f(T)) = Ker(g(T)) \oplus Ker(h(T))
@@ -26,23 +26,25 @@ tenemos que
   0 = u(T)g(T)\beta + v(T)h(T)\beta = \beta
 \]
 
-\textbf{Proposición.} Sea \(T: V \rightarrow V \) un endomorfismo \(K\)-lineal, con \(V\) espacio vectorial de dimensión finita. Entonces, si el polinomio mínimo \(m(X)\) de  \(T\) es irreducible en  \(K[X]\), el polinomio característico \(p(X)\) de T se escribe como \(m(X)^t\) para algún \(t \in \mathbb{N}\).\\
+\textbf{Proposición 2.} Sea \(T: V \rightarrow V \) un endomorfismo \(K\)-lineal, con \(V\) espacio vectorial de dimensión finita. Entonces, si el polinomio mínimo \(m(X)\) de  \(T\) es irreducible en  \(K[X]\), el polinomio característico \(p(X)\) de T se escribe como \(m(X)^t\) para algún \(t \in \mathbb{N}\).\\
 
 \textbf{Demostración.}\\
-Razonando por contradicción, supongamos que el polinomio característico de \(T\) es  \(mg\), donde  \(g\) es primo relativo con \(m\). Entonces, usando la proposición anterior tenemos que \(V = Ker(m(T)) \oplus Ker(g(T))\). Es facil comprobar que el polinomio mínimo de \(T\) es el mínimo común múltiplo del polinomio mínimo de \(T\restriction_{Ker(m(T))}\) y el polinomio mínimo \(T\restriction_{Ker(g(T))}\).\\
+Razonando por contradicción, supongamos que el polinomio característico de \(T\) es  \(mg\), donde  \(g\) es primo relativo con \(m\). Entonces, usando la proposición 1 tenemos que \(V = Ker(m(T)) \oplus Ker(g(T))\). Es facil comprobar que el polinomio mínimo de \(T\) es el mínimo común múltiplo del polinomio mínimo de \(T\restriction_{Ker(m(T))}\) y el polinomio mínimo \(T\restriction_{Ker(g(T))}\).\\
 
-Ahora, como el polinomio mínimo de \(T\restriction_{Ker(m(T))}\) es \(m\) también, y este es irreducible, tenemos que \(g = 1\), lo que prueba nuestro resultado.\\
+Ahora, como el polinomio mínimo de \(T\restriction_{Ker(m(T))}\) es \(m\) también, y este es irreducible, tenemos que \(g = 1\), lo que prueba la proposición.\\
 
-Ahora, sean \(v_1, \dots, v_t\) los calculados en el ejercicio anterior, solo necesitamos probar que, dado \(v_i\), la dimensión como subespacio de \(K[X]v_i\) es el grado del polinomio mínimo, lo que nos diría que la dimensión de nuestro espacio vectorial sería \(deg(m) \cdot t\). Antes de ver esto, sabemos que el polinomio mínimo de \(T\restriction_{K[X]v_i}\) es \(m\) para \(i = 1, \dots, t\), ya que este irreducible, y es el mcm de los polinomio mínimos de las restricciones de T a cada uno de los submódulos, pues el espacio total es suma directa de ellos. Ahora si, calculemos la dimensión \(K[X]vi\).\\
+Veamos lo que hemos probado hasta ahora y lo que necesitamos para terminar el ejercicio. La proposición 2 nos dice que el polinomio característico de \(T\) se escribe como \(m(X)^i\) para algún \(i \in \mathbb{N}\). Ahora, dados los \(v_1, \dots, v_t\) calculados en el ejercicio anterior, tenemos que ver que nuestro polinomio característico es \(m(X)^t\). Para ello, veremos que la dimensión de nuestro espacio vectorial \(V\) es  \(deg(m) \cdot t\), y por tanto el grado de nuestro polinomio característico coincidirá con esta, y por tanto tendrá que ser \(m(X)^t\).\\
 
-Sea \(w \in K[X]v_i\), tenemos que  \(w = g(T)(v_i)\). Ahora bien, diviendo nuestro polinomio  \(g\) por el polinomi mínimo  \(m\), tenemos que  \(g = mh + r\), donde \(r\) es un polinomio de grado estrictamente menor que el del polinomio mínimo. Por tanto, para cualquier polinomio \(g\) existe un polinomio \(r\) de grado estrictamente menor que el grado del polinomio mínimo \(m\), digamos \(n\), tal que \(g(T)(v_i) = r(T)(v_i)\). Por tanto, \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\) forman un sistema de generadores de \(K[X]v_i\). Ahora, supongamos que estos no fueran linealmente independientes, entonces existiría \(a_0, \dots, a_{n-1}\) tales que
+En primer lugar, comprobemos que el polinomio mínimo de \(T\restriction_{K[X]v_i}\) es \(m\) para \(i = 1, \dots, t\). Sabemos por el ejercicio anterior que \(V = K[X]v_1 \oplus \cdots \oplus K[X]v_t\). Sabemos también que, dada un espacio vectorial \(V = A \oplus B\), y una aplicación lineal \(T:V \rightarrow V\), el polinomio mínimo de \(T\) es el mínimo común múltiplo entre los polinomios mínimos de  \(T\restriction_{A}\) y  \(T\restriction_{B}\). Por tanto, volviendo a nuestro caso concreto, el polinomio mínimo \(m\) de \(T\) es el mínimo comúm multiplo del polonomio mínimo de \(T\) restringida a cada uno de estos submódulos, pero como \(m\) es irreducible, el polinomio mínimo de cada restricción es  \(m\) también.\\
+
+Podemos ya calcular la dimensión de cada subespacio \(K[X]v_i\). Sea \(w \in K[X]v_i\), tenemos que  \(w = g(T)(v_i)\). Ahora bien, diviendo nuestro polinomio  \(g\) por el polinomi mínimo  \(m\), tenemos que  \(g = mh + r\), donde \(r\) es un polinomio de grado estrictamente menor que el del polinomio mínimo, luego para cualquier polinomio \(g\) existe un polinomio \(r\) de grado estrictamente menor que el grado del polinomio mínimo \(m\), digamos \(n\), tal que \(g(T)(v_i) = r(T)(v_i)\). Por tanto, \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\) forman un sistema de generadores de \(K[X]v_i\). \\
+
+Ahora, supongamos que estos no fueran linealmente independientes, entonces existiría \(a_0, \dots, a_{n-1}\) tales que
 \[
 a_0v_i + \dots + a_{n-1}T^{n-1}(v_i) = 0
 .\]
-Además, podemos comprobar que se anula en cualquier elemento de \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\), pues:
+Además, podemos comprobar que se anula en cualquier elemento de \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\), y por tanto en todo el submódulo, lo que sería contradicción pues tendríamos un polinomio de grado menor que el del polinomio mínimo que se anula en todo el submódulo. En efecto,
 \[
 a_0T^k(v_i) + \dots + a_{n-1}T^{n-1}(T^k(v_i)) = T^k(a_0v_i + \dots + a_{n-1}T^{n-1}(v_i)) = 0
-.\]
-Por tanto, tendríamos un polinomio de grado estrictamente menor que el polinomio mínimo que se anula en todo el submódulo, lo que sabemos que es una contradicción, quedándo así probado el resultado.\\
-
-Resumiendo, hemos probado, mediante las dos primeras proposiciones, que el polinomio característico se escribe como \(m(X)^i\) para algún  \(i\), y luego hemos probado que la dimensión de nuestro espacio vectorial es  \(deg(m)\cdot t\), siendo \(t\) el obtenido en el ejercicio anterior, por tanto el polinomio característico es \(m(X)^t\)
+\]
+luego \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\) son una base de \(K[X]v_i\), y la dimensión del submódulo como subespacio es \(n = deg(m)\). Por tanto, como \(V = K[X]v_1 \oplus \cdots \oplus K[X]v_t\), tiene dimensión \(deg(m) \cdot t\), quedando probado que el polinomio característico es  \(m(X)^t\).
