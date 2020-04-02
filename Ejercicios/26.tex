@@ -33,6 +33,16 @@ Razonando por contradicción, supongamos que el polinomio característico de \(T
 
 Ahora, como el polinomio mínimo de \(T\restriction_{Ker(m(T))}\) es \(m\) también, y este es irreducible, tenemos que \(g = 1\), lo que prueba nuestro resultado.\\
 
-Con esto, solo necesitamos probar que, dado un \(v\) cualquiera, la dimensión como subespacio de \(K[X]v\) es el grado del polinomio mínimo, ya que, utilizando el ejercicio anterior, tendríamos que la dimensión de nuestro espacio vectorial sería \(deg(m) \cdot t\). Veámoslo.
+Ahora, sean \(v_1, \dots, v_t\) los calculados en el ejercicio anterior, solo necesitamos probar que, dado \(v_i\), la dimensión como subespacio de \(K[X]v_i\) es el grado del polinomio mínimo, lo que nos diría que la dimensión de nuestro espacio vectorial sería \(deg(m) \cdot t\). Antes de ver esto, sabemos que el polinomio mínimo de \(T\restriction_{K[X]v_i}\) es \(m\) para \(i = 1, \dots, t\), ya que este irreducible, y es el mcm de los polinomio mínimos de las restricciones de T a cada uno de los submódulos, pues el espacio total es suma directa de ellos. Ahora si, calculemos la dimensión \(K[X]vi\).\\
 
-Sea \(w \in K[X]v\), tenemos que  \(w = g(T)(v)\). Ahora bien, diviendo nuestro polinomio  \(g\) por el polinomi mínimo  \(m\), tenemos que  \(g = mh + r\), donde \(r\) es un polinomio de grado estrictamente menor que el del polinomio mínimo. Por tanto, para cualquier polinomio \(g\) existe un polinomio \(r\) de grado estrictamente menor que el grado del polinomio mínimo \(m\), digamos \(n\), tal que \(g(T)(v) = r(T)(v)\). Por tanto, \(\{v, T(v), \dots, T^n(v)\}\) forman un sistema de generadores de \(K[X]v\).
+Sea \(w \in K[X]v_i\), tenemos que  \(w = g(T)(v_i)\). Ahora bien, diviendo nuestro polinomio  \(g\) por el polinomi mínimo  \(m\), tenemos que  \(g = mh + r\), donde \(r\) es un polinomio de grado estrictamente menor que el del polinomio mínimo. Por tanto, para cualquier polinomio \(g\) existe un polinomio \(r\) de grado estrictamente menor que el grado del polinomio mínimo \(m\), digamos \(n\), tal que \(g(T)(v_i) = r(T)(v_i)\). Por tanto, \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\) forman un sistema de generadores de \(K[X]v_i\). Ahora, supongamos que estos no fueran linealmente independientes, entonces existiría \(a_0, \dots, a_{n-1}\) tales que
+\[
+a_0v_i + \dots + a_{n-1}T^{n-1}(v_i) = 0
+.\]
+Además, podemos comprobar que se anula en cualquier elemento de \(\{v_i, T(v_i), \dots, T^{n-1}(v_i)\}\), pues:
+\[
+a_0T^k(v_i) + \dots + a_{n-1}T^{n-1}(T^k(v_i)) = T^k(a_0v_i + \dots + a_{n-1}T^{n-1}(v_i)) = 0
+.\]
+Por tanto, tendríamos un polinomio de grado estrictamente menor que el polinomio mínimo que se anula en todo el submódulo, lo que sabemos que es una contradicción, quedándo así probado el resultado.\\
+
+Resumiendo, hemos probado, mediante las dos primeras proposiciones, que el polinomio característico se escribe como \(m(X)^i\) para algún  \(i\), y luego hemos probado que la dimensión de nuestro espacio vectorial es  \(deg(m)\cdot t\), siendo \(t\) el obtenido en el ejercicio anterior, por tanto el polinomio característico es \(m(X)^t\)
