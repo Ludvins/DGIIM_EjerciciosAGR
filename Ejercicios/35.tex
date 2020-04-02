@@ -4,7 +4,7 @@
   \(T\) si \(\{v, T(v), \dots, T^{n-1}(v)\}\) es una base de \(V\)
   como \(K\)-espacio vectorial. Demostrar que \(V\) admite un vector cíclico si,
   y sólo si, el polinomio mínimo de \(T\) tiene grado \(n\). ¿Cuál es entonces
-  la longitud de \(V\) en tanto que \(K[X]\)-módulo.}\\
+  la longitud de \(V\) en tanto que \(K[X]\)-módulo?.}\\
 
 
 Comencemos viendo que si admite un vector cíclico entonces el polinomio mínimo
@@ -20,13 +20,13 @@ Supongamos ahora que el polinomio mínimo \(m\) tiene grado \(n\). Sea
 \]
 la descomposición de \(m\) en factores irreducibles y consideremos
 \[
-  V_i = Ker(m_i(T)) = \{v \in V \ | \ m_i(T)(v) = 0\}
+  V_i = Ker(m_i(T)) = \{v \in V \ | \ m_i^{n_i}(T)(v) = 0\}
 \]
 Utilizando un proceso inductivo en la proposición del ejercicio 26, podemos ver
-que \(V = \oplus_i V_i\), además, es sencillo comprobar que son submódulos de \(V\) puesto que \(T\) y \(m_i(T)\)
-conmutan, luego \(m_i(T)(T(v)) = T(m_i(T)(v)) = 0\).
-Notemos que \(m_i^{n_i - 1} \neq 0\) en \(V_i \ \forall i\), ya que en caso
-contrario, lo multiplicariamos por el resto de factores irreducibles y
+que \(V = \oplus_i V_i\), además, es sencillo comprobar que son submódulos de \(V\) puesto que \(T\) y \(m_i^{n_i}(T)\)
+conmutan, luego \(m_i^{n_i}(T)(T(v)) = T(m_i^{n_i}(T)(v)) = 0\).
+Notemos que \(m_i^{n_i - 1}(T) \neq 0\) en \(V_i \ \forall i\), ya que en caso
+contrario, lo multiplicaríamos por el resto de factores irreducibles y
 tendríamos un polinomio que anula todo \(V\) de grado menor \(n\).\\
 
 Entonces existe \(v_i \not \in Ker(m_i^{n_i-1}(T)) \ \forall i\).\\
@@ -37,6 +37,7 @@ entonces el polinomio mínimo de \(\langle v_i \rangle\) divide a \(m_j\) y
 
 Consideramos entonces \(x = \oplus_i v_i\), tenemos que ningún divisor de \(m\)
 evaluado en \(T\) anula a \(x\). Entonces \(x\) es un vector que solo se anula
-por \(m\) y multiplos suyos, luego polinomio de menor grado evaluado en \(T\) y
+por \(m\) y múltiplos suyos, luego polinomio de menor grado evaluado en \(T\) y
 en \(x\) no resulta 0. Es decir, \(\{x, T(x), \dots, T^{n-1}(x)\}\)
-son linealmente independientes.
+son linealmente independientes, luego forman una base de \(V\) como espacio
+vectorial.
