@@ -31,4 +31,8 @@ tenemos que
 \textbf{Demostración.}\\
 Razonando por contradicción, supongamos que el polinomio característico de \(T\) es  \(mg\), donde  \(g\) es primo relativo con \(m\). Entonces, usando la proposición anterior tenemos que \(V = Ker(m(T)) \oplus Ker(g(T))\). Es facil comprobar que el polinomio mínimo de \(T\) es el mínimo común múltiplo del polinomio mínimo de \(T\restriction_{Ker(m(T))}\) y el polinomio mínimo \(T\restriction_{Ker(g(T))}\).\\
 
-Ahora, como el polinomio mínimo de \(T\restriction_{Ker(m(T))}\) es \(m\) también, y este es irreducible, tenemos que \(g = 1\), lo que prueba nuestro resultado.
+Ahora, como el polinomio mínimo de \(T\restriction_{Ker(m(T))}\) es \(m\) también, y este es irreducible, tenemos que \(g = 1\), lo que prueba nuestro resultado.\\
+
+Con esto, solo necesitamos probar que, dado un \(v\) cualquiera, la dimensión como subespacio de \(K[X]v\) es el grado del polinomio mínimo, ya que, utilizando el ejercicio anterior, tendríamos que la dimensión de nuestro espacio vectorial sería \(deg(m) \cdot t\). Veámoslo.
+
+Sea \(w \in K[X]v\), tenemos que  \(w = g(T)(v)\). Ahora bien, diviendo nuestro polinomio  \(g\) por el polinomi mínimo  \(m\), tenemos que  \(g = mh + r\), donde \(r\) es un polinomio de grado estrictamente menor que el del polinomio mínimo. Por tanto, para cualquier polinomio \(g\) existe un polinomio \(r\) de grado estrictamente menor que el grado del polinomio mínimo \(m\) tal que \(g(T)(v) = r(T)(v)\). Por tanto, \(\{v, T(v), T^2(v)\}\) forman un sistema de generadores de \(K[X]v\).
