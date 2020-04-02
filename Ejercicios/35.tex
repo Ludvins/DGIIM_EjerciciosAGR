@@ -36,8 +36,14 @@ entonces el polinomio mínimo de \(\langle v \rangle\) divide a \(m_j\) y
 \(m_i^{n_i}\), que como son primos relativos resulta ser 1, luego \(v = 0\).
 
 Consideramos entonces \(x = \sum_i v_i\), tenemos que ningún divisor de \(m\)
-evaluado en \(T\) anula a \(x\). Entonces \(x\) es un vector que solo se anula
-por \(m\) y múltiplos suyos, luego polinomio de menor grado evaluado en \(T\) y
-en \(x\) no resulta 0. Es decir, \(\{x, T(x), \dots, T^{n-1}(x)\}\)
+evaluado en \(T\) anula a \(x\). Supongamos entonces que un polinomio \(p\) de
+grado menor que \(n\) que no es un divisor de \(m\) y cumple \(p(T)(x) = 0\),
+entonces por ser primos relativos, existen \(u,v\) tales que \(1 = up + vm
+\implies x = u(T)p(T)x + v(T)m(T)x = 0 \), lo cual no puede suceder por ser
+\(v_i \neq 0 \ \forall i\), lo cual no puede suceder por ser \(v_i \neq 0 \
+\forall i\). \\
+
+Entonces \(x\) es un vector que solo se anula
+por \(m\) y múltiplos suyos. Es decir, \(\{x, T(x), \dots, T^{n-1}(x)\}\)
 son linealmente independientes, luego forman una base de \(V\) como espacio
-vectorial.
+vectorial.\\
