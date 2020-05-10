@@ -9,19 +9,13 @@ Sabemos que un submódulo de nuestro \(\mathbb{R}[x]\)-módulo sobre
 \(\mathbb{R}^3\) tiene  que ser un subespacio de este, por tanto las posibles
 longitudes son \(1,2\) o \(3\).\\
 
-Veamos que, para cualquier espacio real de dimensión \(n\), y cualquier operador
-lineal \(T\), debe existir un subespacio invariante por \(T\) ya sea de
-dimensión 1 o dimensión 2, donde un subespacio invariante es equivalente a ser
-un submódulo, esto nos permitirá descartar el caso en el que no exista ningún
-submódulo y la longitud sea 1.\\
-
-Si tomamos un vector no nulo \(v \in \mathbb{R}^n\), sabemos que existen unos
-coeficientes reales \(a_0, \dots, a_n\) tal que
+Sea \(p(x)\) el polinómio característico de \(T\), sabemos que
 \[
-  0 = a_0v + \dots + a_nT^n(v) = (a_0I + \dots + a_nT^n)(v)
+  p(T)(v) =  a_0v + \dots + a_nT^n(v) = (a_0I + \dots + a_nT^n)(v) = 0
 \]
-Factoriamos este polinomio en \(T\) en factores irreducibles de grado 1 y 2.
-Como el polinomio no es inyectivo, alguno de dichos factores debe no serlo.
+
+Luego \(p(T)\) no es una aplicación inyectiva. Si consideramos su factorización en irreducibles de grado 1 y 2, al menos uno de dichos factores debe ser no inyectivo.
+
 \begin{itemize}
 \item \textbf{Caso 1.} Un factor de grado 1 no es inyectivo, sea este factor de la
   forma \(T - \lambda I\), \(\exists u \in \mathbb{R}^3\) tal que \((T - \lambda
@@ -32,8 +26,9 @@ Como el polinomio no es inyectivo, alguno de dichos factores debe no serlo.
   -\alpha T(u) - \beta u \), \(U\) es un submódulo.
 \end{itemize}
 
-Además es facil comprobar que todos los submódulos se generan de
-esta forma, pues sea \(\langle u \rangle = U\) un submódulo, se tiene que \(T(u)
+Además, es fácil notar que cualquier submódulo esta generado bien por un vector propio (si es de dimensión 1) o bien por un vector y su imagen por \(T\) o dos vectores propios (si su dimensión es 2).
+
+Veamos esto, sea \(\langle u \rangle = U\) un submódulo, se tiene que \(T(u)
 \in U \implies \exists a \in \mathbb{R}\) tal que \(T(u) = au\), luego \(u\) es un
 vector propio. En caso de ser \(U = \langle u , v \rangle\), si alguno de ellos
 no es un vector propio, digamos por ejemplo \(u\), entonces \(T(u)\) y \(u\) son linealmente independientes y
@@ -43,8 +38,7 @@ Como estamos en \(\mathbb{R}^3\), la descomposición en irreducibles del
 polinomio característico de \(T\) contiene un polinomio de grado 1, luego
 siempre existe un vector propio.\\
 
-Nos limitamos a tres casos en el estudio de la longitud (los casos
-anteriores no son excluyentes), a saber
+Nos limitamos a tres casos en el estudio de la longitud, a saber
 \begin{itemize}
 \item Existe un único valor propio, y para el vector propio asociado \(u\)  no existe ningún espacio de la forma
   \(\langle v, T(v)\rangle \) que contenga a \(u\), invariante por \(T\). Entonces tenemos la serie de composición
