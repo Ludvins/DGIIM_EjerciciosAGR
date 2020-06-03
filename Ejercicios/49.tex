@@ -1,0 +1,23 @@
+\section{Ejercicio 49.}
+\emph{Comprobar que la multiplicación definida sobre \(KG\) es asociativa. Su elemento neutro es \(1e\), donde \(e\) es el elemento neutro de \(G\)}.\\
+
+Sean \(a,b,c \in KG\), tal que
+\[
+  a = \sum_{g \in G}\lambda_{g}g, \quad b = \sum_{h \in G}\lambda_{h}h, \quad c = \sum_{j \in G}\lambda_{j}j
+\]
+Veamos la asociatividad
+\[
+\Big(  \sum_{g \in G}\lambda_{g}g \sum_{h \in G}\lambda_{h}h  \Big)  \sum_{j \in G}\lambda_{j}j = \sum_{g,h \in G} \lambda_{g}\lambda_{h}gh \sum_{j \in G} \lambda_{j}j = \sum_{g,h,j \in J} \lambda_{g}\lambda_{h}\lambda_{j}ghj
+\]
+\[
+  \sum_{g \in G}\lambda_{g}g \Big( \sum_{h \in G}\lambda_{h}h  \sum_{j \in G}\lambda_{j}j \Big) =
+  \sum_{g G} \lambda_{g} \sum_{h,j \in G} \lambda_{h}\lambda_{j}hj =
+  \sum_{g,h,j \in J} \lambda_{g}\lambda_{h}\lambda_{j}ghj
+\]
+Vemos el elemento neutro:
+\[
+  1e = \sum_{h \in G}\lambda_{h}h \text{ con } \lambda_{h} = 0 \ \forall h \neq e
+\]
+\[
+  1e \sum_{g \in G}\lambda g = \sum_{g,h \in G}\lambda_{g}\lambda_{h} gh = \sum_{g \in G}\lambda g
+\]
