@@ -1,4 +1,3 @@
-
 main: main.pdf
 
 main.pdf: *.tex
