@@ -1,0 +1,25 @@
+\section{Ejercicio 57. }\emph{ Calcular la tabla de caracteres del grupo cíclico \(C_{4}\)}\\
+
+Comenzamos notando que por ser un grupo abelaino, las clases de conjugación de \(C_{4} = \langle a \rangle\)  son \(\{1\}, \{a\}, \{a^{2}\}\) y \(\{a^{3}\}\). Luego tenemos 4 caracteres irreducibles complejos.\\
+
+Consideremos ahora 4 representaciones que están totalmente determinadas por la imagen de \(a\), pues \(\rho(a^{n}) = \rho(a)^{n}\).
+\[
+  \begin{aligned}
+    \rho_{1}(a)(z) &= z \implies \mathcal{X}_{1}(a) = tr(\rho_{1})(a) = 1\\
+    \rho_{2}(a)(z) &= -z \implies \mathcal{X}_{2}(a) = tr(\rho_{2})(a) = -1\\\
+    \rho_{3}(a)(z) &= iz \implies \mathcal{X}_{3}(a) = tr(\rho_{3})(a) = i\\\
+    \rho_{4}(a)(z) &= -iz \implies \mathcal{X}_{4}(a) = tr(\rho_{4})(a) = -i\\\
+  \end{aligned}
+\]
+Representaciones claramente irreducibles pues no hay subespacios. Tenemos entonces la siguiente tabla de caracteres
+
+\begin{figure}[H]
+  \centering
+    \begin{tabular}{c|cccc}
+      \(C_{4}\)  & \(1\)  & \(a\)  & \(a^{2}\) & \(a^{3}\)  \\ \hline
+      \(\mathcal{X}_{1}\) & \(1\)   &  \(1\)    &     \(1\)      &     \(1\)       \\
+      \(\mathcal{X}_{2}\) & \(1\)   &  \(-1\)  &     \(1\)      &     \(-1\)       \\
+      \(\mathcal{X}_{3}\) & \(1\)   &   \(i\)    &     \(-1\)      &     \(-i\)       \\
+      \(\mathcal{X}_{4}\) & \(1\)   &   \(-i\)   &     \(1\)      &     \(i\)       \\
+    \end{tabular}
+\end{figure}
