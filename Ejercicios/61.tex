@@ -1,0 +1,66 @@
+\section{Ejercicio 61. **} \emph{Calcular razonadamente la tabla del grupo dihédrico \(D_{n}\) para \(n \geq 2\)}.\\
+
+
+Comenzamos suponiendo que \(n\) es \textbf{par} y sea \(m = n/2\). Notemos que todos los elementos de \(D_{n}\) se escriben como \(r^{k}\) o \(sr^{k}\) para cierto \(k\).\\
+
+\textbf{Clases de conjugación.}\\
+Calculamos entonces las clases de conjugación, consideramos las parejas \(\{r^{k}, r^{-k}\}\), tenemos que
+\[
+  r^{l}r^{k}r^{-l} = r^{k} \quad \text{y} \quad sr^{l}r^{k}(sr^{l})^{-1} = sr^{l}r^{k}r^{-l}s^{-1} = sr^{k}s^{-1} = r^{-k}
+\]
+Luego son una clase de conjucación, con \(k=1,\dots,m\).\\
+
+Por otro lado \(r^{m}\) está en el centro luego es otra clase de conjugación por sí solo.\\
+
+Consideramos ahora la clase de \(s\), tenemos que
+\[
+  r^{l}sr^{-l} = sr^{-2l} \quad \text{y} \quad r^{l}sr^{2k}r^{-l} = r^{l}sr^{-l}r^{2k} = sr^{2k-2l}
+\]
+\[
+  sr^{l}ssr^{-l} = s^{3} = s \quad \text{y} \quad sr^{l}sr^{2k}sr^{-l} = sssr^{2k} = sr^{2k}
+\]
+luego los elementos de la forma \(sr^{2k}\) forman otra clase de conjugación.\\
+
+Por el mismo motivo, se puede ver que los elementos \(sr^{k}\) con \(k\) impar son la última clase de conjugación.\\
+
+En resumen tenemos, la clase del \(1\), la clase de \(r^{2}\), \(m-1\)  clases de 2 elementos \(\{r^{k}, r^{-k}\}\), una de elementos de la forma \(sr^{l}\) con \(l\) par y otra clases con \(l\) impar. En total, \(4 + m-1\)  \\
+
+\textbf{Representaciones}\\
+Consideramos las mismas 4 representaciones de grado 1 que en el ejercicio anterior, que siguen existiendo por el mismo razonamiento que hicimos entonces, llamaremos a sus caracteres \(\mathcal{X}_{1}, \mathcal{X}_{2}, \mathcal{X}_{3}\) y \(\mathcal{X}_{4}\). Ya tenemos 4 caracteres fijados, como
+\[
+  |D_{n}| = 2n = 4 + (m-1)\times 2^{2}
+\]
+si encontramos \(m-1\) caracteres irreducibles de grado \(2\), los habremos encontrado todos. Consideramos entonces, la misma estrategia que para los 4 caracteres que ya tenemos, pero en dimensión 2, sea  \(\omega = e^{2i\pi / n}\) la \(n\)-ésima raiz de la unidad, definimos entonces las siguientes representaciones de grado 2:
+\[
+  \begin{aligned}
+    \rho^{h} : D_{4} &\to GL_{2}(\mathbb{C}) \quad \forall h \in \{1,\dots,m-1\}\\
+    r &\mapsto \begin{pmatrix} \omega^{h} & 0 \\ 0 &\omega^{-h} \end{pmatrix}\\
+    s &\mapsto \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+  \end{aligned}
+\]
+Notamos que los únicos subespacios invariantes ante \(\rho(r)\) son \(\langle (1,0) \rangle\) y \(\langle (0,1) \rangle\). Sin embargo, no lo son para \(\rho(s)\), luego no existen subespacios invariantes y las representaciones \textbf{son irreducibles}. Claramente estas representaciones \textbf{no son isomorfas} entre sí, pues si lo fueran, existiria \(T\) tal que \(T\rho^{h_{1}}(r)T^{-1} = \rho^{h_{2}}(r)\), luego \(\rho^{h_{1}}(r)\) y \(\rho^{h_{2}}(r)\) tendrían los mismos valores propios, \(\omega^{h_{1}} = \omega^{h_{2}}\), luego \(h_{1} = h_{2}\). Tenemos entonces la siguiente tabla de caracteres donde mostramos los elementos con \(r^{k}\) y \(sr^{k}\).
+\begin{figure}[H]
+  \centering
+  \begin{tabular}{c|ccc}
+      \(D_{n}\)           & \(1\)   & \(r^{k}\)  & \(sr^{k}\) \\ \hline
+      \(\mathcal{X}_{1}\) & \(1\)   &  \(1\)    &     \(1\)    \\
+      \(\mathcal{X}_{2}\) & \(1\)   &  \((-1)^{k}\)     &     \((-1)^{k}\)   \\
+      \(\mathcal{X}_{3}\) & \(1\)   &  \(1\) &     \(-1\)   \\
+      \(\mathcal{X}_{4}\) & \(1\)   &  \((-1)^{k}\)    &     \((-1)^{k+1}\)  \\
+      \(\mathcal{X}_{h}\) & \(2\)   &  \(2 cos{\frac{2hk\pi}{n}}\)    &     \(0\) \\
+    \end{tabular}
+\end{figure}
+
+Hagamos ahora el caso \textbf{impar}, comenzamos calculando las clases de conjugación, al igual que hicimos en el apartado anterior, en este caso no existe la clase de \(r^{2}\) y al ser \(n\) impar, los elementos de la forma \(sr^{2k}\) constituyen todos los elementos \(sr^{l}\) sea \(l\) par o impar. Sea \(m = \frac{n-1}{2}\) tenemos \(m\) clases de la forma \(\{r^{k}, r^{-k}\}\).   Luego tenemos: la clase del 1, \(m\) clases de 2 elementos y una clase con los elementos \(sr^{l}\).\\
+
+En este caso no podemos utilizar los 4 primeros elementos de la tabla de caracteres, pero si los \(\rho^{h}\), pues podemos repetir su construcción. Nos quedan entonces 2 caracteres de grado 1. Uno de ellos es el caracter trivial y el ultimo lo rellenamos por ortogonalidad.
+
+\begin{figure}[H]
+  \centering
+  \begin{tabular}{c|ccc}
+      \(D_{n}\)           & \(1\)   & \(r^{k}\)  & \(sr^{k}\) \\ \hline
+      \(\mathcal{X}_{1}\) & \(1\)   &  \(1\)    &     \(1\)    \\
+      \(\mathcal{X}_{2}\) & \(1\)   &  \((-1)^{k}\)     &     \((-1)^{k}\)   \\
+      \(\mathcal{X}_{h}\) & \(2\)   &  \(2 cos{\frac{2hk\pi}{n}}\)    &     \(0\) \\
+    \end{tabular}
+\end{figure}
