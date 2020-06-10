@@ -3,14 +3,16 @@
 
 \textit{Sea \(G\) un grupo abeliano finito, y sea \(\widehat{G}\) el conjunto de los caracteres complejos irreducibles de \(G\). Demostrar que el producto inducido por el de números complejos dota a \(\widehat{G}\) de estructura de grupo.} \\
 
-En efecto, dados \(\chi, \chi' \in \widehat{G}\), definimos \(\rho: G \to GL(\mathbb{C})\) con
+En primer lugar mencionemos que por ser \(G\) un grupo abeliano finito, sabemos que el número de caracteres complejos irreducibles coincide con el orden del grupo, y por tanto \(\chi(1) = 1\) para todo  \(\chi \in \widehat{G}\). Además, sabemos que cualquier caracter complejo de orden 1 es irreducible, pues no puede tener subespacios propios.  \\
+
+Ahora, dados \(\chi, \chi' \in \widehat{G}\), definimos \(\rho: G \to GL(\mathbb{C})\) con
 \[
 \rho(g) = \chi(g) \chi'(g) \text{ para todo } g \in G
 .\]
 
-Si demostramos que \(\rho\) es una representación compleja de \(G\) habríamos terminado, pues es inmediato que el caracter complejo asociado a \(\rho\) cumple \(\chi_{\rho}(g) = \chi(g) \chi'(g)\) para todo \(g \in G\). \\
+Si demostramos que \(\rho\) es una representación compleja de \(G\) habríamos terminado, pues al ser de orden uno, el caracter complejo asociado \(\chi_{\rho}\) es irreducible y se cumple \(\chi_{\rho}(g) = \chi(g) \chi'(g) \in \widehat{G}\) para todo \(g \in G\). \\
 
-Comprobemos entonces que \(\rho\) es un morfismo para concluir la demostración. Por ser \(G\) un grupo abeliano finito, sabemos que el número de caracteres complejos irreducibles coincide con el orden del grupo, y por tanto \(\chi(1) = 1\) para todo  \(\chi \in \widehat{G}\). Por tanto, \(\rho(1) = \chi(1)\chi'(1) = 1\). Por otro lado, dados \(g, h \in G\), como ya dijimos que todos los caracteres irreducibles son de orden 1, tenemos que
+Comprobemos entonces que \(\rho\) es un morfismo para concluir la demostración.  Por tanto, \(\rho(1) = \chi(1)\chi'(1) = 1\). Por otro lado, dados \(g, h \in G\), como ya dijimos que todos los caracteres irreducibles son de orden 1, tenemos que
 \[
 \rho(gh) = \chi(gh) \chi'(gh) = \chi(g)\chi(h)\chi'(g)\chi'(h) = \rho(g)\rho(h)
 .\]
