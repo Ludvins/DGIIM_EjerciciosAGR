@@ -1,0 +1,41 @@
+\section{Ejercicio 63. **}%
+\label{sec:ejercicio_63_}
+
+\textit{Sea \(G\) un grupo abeliano finito, y \(\hat{G}\) el grupo definido en el Ejercicio 62. Demostrar que existe un isomorfismo de grupos \(G \cong \hat{G}\).}\\
+
+En primer lugar probaremos que el enunciado es cierto para \(G\) un grupo cíclico con \(|G| = n\), lo que es una versión más débil de nuestro enunciado. Por el ejercicio anterior, sabemos que \( \hat{G}\) es un grupo con \(|\hat{G}| = |G|\), por tanto solo necesitamos probar que \(\hat{G}\) es cíclico.
+
+Sea \(\omega\) la raiz \(n\)-ésima principal de la unidad, \(g\) un generador de \(G\), y \(\chi:G \to \mathbb{C}\) el caracter complejo dado por
+
+\[
+\chi(g^k) = \omega^k \quad \forall k = 1, \ldots, n
+.\]
+
+Se comprueba de forma sencilla que \(\chi\) es un caracter. Ahora bien, por ser \(\chi\) un caracter de orden 1, sabemos que \(\chi(gh) = \chi(g)\chi(h)\) para todo  \(g, b \in G\). Por tanto, tenemos que \(\chi^k(g) = \chi(g^k) = \omega^k\) y por ser \(g\) un generador de \(G\) quedan determinados los caracteres  \(\chi^k\) para todo  \(k = 1, \ldots, n\). Por tanto, como \(|\widehat{G}| = n\), \(\langle\chi\rangle = \widehat{G}\), luego \( \widehat{G}\) es ciclico y por tanto \(G \cong \widehat{G}\).\\
+
+Ahora, por el \textit{teorema fundamental de los grupos abelianos finitamente generados} sabemos que todo grupo abeliano finito se descompone como suma directa de grupos cíclicos finitos. Por tanto, si probamos que, dados dos grupos abelianos finitos \(G\) y \(H\), entonces  \( \widehat{G \times H} \cong \widehat{G} \times \widehat{H}\), habremos concluido la prueba, pues solo tendríamos que aplicar el resultado iterativamente a la descomposición que nos proporciona el teorema mencionado. \\
+
+Para ver esto, recordemos que como dijimos en el ejercicio anterior, para cualquier grupo abeliano finito tenemos que \(|G| = |\widehat{G}|\), y por tanto \(|\widehat{G \times H}| = |G \times H| = |G| \cdot |H| = |\widehat{G}| \cdot |\widehat{H}| = |\widehat{G} \times \widehat{H}|\). Por tanto si damos un morfismo inyectivo de uno de ellos en el otro habremos demostrado que son isomorfos. \\
+
+Para ello, definimos \(\phi:\widehat{G} \times \widehat{H} \to \widehat{G \times H}\), con
+\[
+\phi(\chi_G, \chi_H)(g, h) = \chi_G(g) \cdot \chi_H(h) \quad \forall (\chi_G, \chi_H) \in \widehat{G} \times \widehat{H}
+.\]
+
+Sea \((\chi_G, \chi_H) \in \widehat{G} \times \widehat{H}\), y llamemos \(\chi = \phi(\chi_G, \chi_H)\). Veamos en primer lugar que \(chi\) es un caracter complejo de \(G \times H\). En efecto, \(\chi(1,1) = \chi_G(1) \cdot \chi_H(1) = 1\), y dados \((g,h), (g',h')\)
+\[
+\chi((g,h)\cdot(g',h')) = \chi(gg',hh') = \chi_G(g)\chi_H(h)\chi_G(g')\chi_H(h') = \chi(g,h)\cdot\chi(g',h')
+.\]
+
+Para concluir, veamos que es un morfismo inyectivo. Es directo comprobar que \(\phi(1_{\hat{G}},1_{\hat{H}}) = 1\). Entonces, dados \((\chi_G, \chi_H), (\chi'_G, \chi'_H) \in \widehat{G} \times \widehat{H}\), tenemos que
+\[
+\phi( \chi_G\chi'_G, \chi_H\chi'_H  )(g,h) = (\chi_G\chi'_G)(g) \cdot (\chi_H\chi'_H)(h) = \chi_G(g)\chi_H(h) \cdot \chi'_G(g)\chi'_H(h)
+\]
+\[
+= \phi(\chi_G,\chi_H)(g,h) \cdot \phi(\chi'_G,\chi'_H)(g,h) \quad \forall (g,h) \in G \times H
+.\]
+
+Por tanto hemos probado que es un morfismo de grupos. Para ver que es inyectivo, supongamos que \( \chi = \phi(\chi_G, \chi_H) = 1\). Entonces,
+\[
+\chi(g,h) = \chi_G(g) \chi_H(h) = 1 \quad \forall (g,h) \in G \times H \implies \chi_G(g) = 1 \text{ y } \chi_H(h) = 1 \quad \forall (g,h) \in G \times H
+.\]
